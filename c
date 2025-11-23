@@ -7,7 +7,6 @@ local cedit = Instance.new("ScreenGui")
 local Open = Instance.new("Frame")
 local usn = Instance.new("TextBox")
 local usn1 = Instance.new("TextLabel")
-local PEMBATAS = Instance.new("TextLabel")
 local Tuning = Instance.new("Folder")
 local TunnerFrame = Instance.new("Frame")
 local Brake = Instance.new("TextBox")
@@ -27,12 +26,33 @@ local ResetTune = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local SetTune = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
-local UIGradient = Instance.new("UIGradient")
+local ConfigFrame = Instance.new("Frame")
+local SaveConfig = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local DeleteConfig = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TuningFileName = Instance.new("TextBox")
+local LoadConfig = Instance.new("Frame")
+local Template = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Other = Instance.new("Frame")
+local Template_2 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local ConfigTune = Instance.new("TextLabel")
+local Pembatas = Instance.new("Folder")
+local PEMBATAS = Instance.new("TextLabel")
+local PEMBATAS_2 = Instance.new("TextLabel")
+local PEMBATAS_3 = Instance.new("TextLabel")
+local PEMBATAS_4 = Instance.new("TextLabel")
+local PEMBATAS_5 = Instance.new("TextLabel")
+local PEMBATAS_6 = Instance.new("TextLabel")
+local PEMBATAS_7 = Instance.new("TextLabel")
 local Notif = Instance.new("TextLabel")
 local usnBtn = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
+local RND = Instance.new("TextLabel")
 local OpenFrame = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 
 --Properties:
 
@@ -45,7 +65,7 @@ Open.Parent = cedit
 Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0.193840578, 0, 0.369610965, 0)
+Open.Position = UDim2.new(0.194746375, 0, 0.344947308, 0)
 Open.Size = UDim2.new(0, 310, 0, 138)
 Open.Visible = false
 
@@ -74,18 +94,6 @@ usn1.Font = Enum.Font.Arial
 usn1.Text = "Username"
 usn1.TextColor3 = Color3.fromRGB(255, 255, 255)
 usn1.TextSize = 17.000
-
-PEMBATAS.Name = "PEMBATAS"
-PEMBATAS.Parent = Open
-PEMBATAS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PEMBATAS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PEMBATAS.BorderSizePixel = 0
-PEMBATAS.Position = UDim2.new(0.438709676, 0, 0, 0)
-PEMBATAS.Size = UDim2.new(0, 2, 0, 138)
-PEMBATAS.Font = Enum.Font.SourceSans
-PEMBATAS.Text = ""
-PEMBATAS.TextColor3 = Color3.fromRGB(0, 0, 0)
-PEMBATAS.TextSize = 14.000
 
 Tuning.Name = "Tuning"
 Tuning.Parent = Open
@@ -302,8 +310,207 @@ SetTune.TextWrapped = true
 
 UICorner_2.Parent = SetTune
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(74, 255, 243)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(74, 255, 243))}
-UIGradient.Parent = Open
+ConfigFrame.Name = "ConfigFrame"
+ConfigFrame.Parent = Tuning
+ConfigFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ConfigFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ConfigFrame.BorderSizePixel = 0
+ConfigFrame.Position = UDim2.new(0, 0, 1, 0)
+ConfigFrame.Size = UDim2.new(0, 136, 0, 104)
+
+SaveConfig.Name = "SaveConfig"
+SaveConfig.Parent = ConfigFrame
+SaveConfig.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SaveConfig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveConfig.BorderSizePixel = 0
+SaveConfig.Position = UDim2.new(0.0882352963, 0, 0.360000014, 0)
+SaveConfig.Size = UDim2.new(0, 111, 0, 27)
+SaveConfig.Font = Enum.Font.Arial
+SaveConfig.Text = "Save Tuning"
+SaveConfig.TextColor3 = Color3.fromRGB(255, 255, 255)
+SaveConfig.TextScaled = true
+SaveConfig.TextSize = 17.000
+SaveConfig.TextWrapped = true
+
+UICorner_3.Parent = SaveConfig
+
+DeleteConfig.Name = "DeleteConfig"
+DeleteConfig.Parent = ConfigFrame
+DeleteConfig.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DeleteConfig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DeleteConfig.BorderSizePixel = 0
+DeleteConfig.Position = UDim2.new(0.0808823556, 0, 0.701153696, 0)
+DeleteConfig.Size = UDim2.new(0, 112, 0, 24)
+DeleteConfig.Font = Enum.Font.Arial
+DeleteConfig.Text = "Delete Tuning"
+DeleteConfig.TextColor3 = Color3.fromRGB(255, 255, 255)
+DeleteConfig.TextScaled = true
+DeleteConfig.TextSize = 17.000
+DeleteConfig.TextWrapped = true
+
+UICorner_4.Parent = DeleteConfig
+
+TuningFileName.Name = "TuningFileName"
+TuningFileName.Parent = ConfigFrame
+TuningFileName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TuningFileName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TuningFileName.BorderSizePixel = 0
+TuningFileName.Position = UDim2.new(0.0735294148, 0, 0.0473078229, 0)
+TuningFileName.Size = UDim2.new(0, 121, 0, 27)
+TuningFileName.Font = Enum.Font.SourceSans
+TuningFileName.Text = ""
+TuningFileName.TextColor3 = Color3.fromRGB(0, 0, 0)
+TuningFileName.TextSize = 14.000
+
+LoadConfig.Name = "LoadConfig"
+LoadConfig.Parent = ConfigFrame
+LoadConfig.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LoadConfig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoadConfig.BorderSizePixel = 0
+LoadConfig.Position = UDim2.new(3.40441179, 0, -1.32692313, 0)
+LoadConfig.Size = UDim2.new(0, 117, 0, 242)
+
+Template.Name = "Template"
+Template.Parent = LoadConfig
+Template.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Template.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Template.BorderSizePixel = 0
+Template.Position = UDim2.new(0.0421961583, 0, 0.0069388398, 0)
+Template.Size = UDim2.new(0, 112, 0, 24)
+Template.Visible = false
+Template.Font = Enum.Font.Arial
+Template.Text = ""
+Template.TextColor3 = Color3.fromRGB(255, 255, 255)
+Template.TextScaled = true
+Template.TextSize = 17.000
+Template.TextWrapped = true
+
+UICorner_5.Parent = Template
+
+Other.Name = "Other"
+Other.Parent = ConfigFrame
+Other.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Other.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Other.BorderSizePixel = 0
+Other.Position = UDim2.new(3.40441179, 0, -1.625, 0)
+Other.Size = UDim2.new(0, 117, 0, 31)
+
+Template_2.Name = "Template"
+Template_2.Parent = Other
+Template_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Template_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Template_2.BorderSizePixel = 0
+Template_2.Position = UDim2.new(0.0421961583, 0, 0.0069388398, 0)
+Template_2.Size = UDim2.new(0, 112, 0, 24)
+Template_2.Visible = false
+Template_2.Font = Enum.Font.Arial
+Template_2.Text = ""
+Template_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Template_2.TextScaled = true
+Template_2.TextSize = 17.000
+Template_2.TextWrapped = true
+
+UICorner_6.Parent = Template_2
+
+ConfigTune.Name = "Config Tune"
+ConfigTune.Parent = Other
+ConfigTune.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ConfigTune.BackgroundTransparency = 1.000
+ConfigTune.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ConfigTune.BorderSizePixel = 0
+ConfigTune.Position = UDim2.new(-0.273519933, 0, -0.0313248187, 0)
+ConfigTune.Size = UDim2.new(0, 189, 0, 31)
+ConfigTune.Font = Enum.Font.Arial
+ConfigTune.Text = "Config Tune"
+ConfigTune.TextColor3 = Color3.fromRGB(255, 255, 255)
+ConfigTune.TextSize = 17.000
+
+Pembatas.Name = "Pembatas"
+Pembatas.Parent = Tuning
+
+PEMBATAS.Name = "PEMBATAS"
+PEMBATAS.Parent = Pembatas
+PEMBATAS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS.BorderSizePixel = 0
+PEMBATAS.Position = UDim2.new(1.5, 0, -0.00724637695, 0)
+PEMBATAS.Size = UDim2.new(0, -465, 0, -6)
+PEMBATAS.Font = Enum.Font.SourceSans
+PEMBATAS.Text = ""
+PEMBATAS.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS.TextSize = 14.000
+
+PEMBATAS_2.Name = "PEMBATAS"
+PEMBATAS_2.Parent = Pembatas
+PEMBATAS_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_2.BorderSizePixel = 0
+PEMBATAS_2.Position = UDim2.new(1.5, 0, 1.7971015, 0)
+PEMBATAS_2.Size = UDim2.new(0, -465, 0, -6)
+PEMBATAS_2.Font = Enum.Font.SourceSans
+PEMBATAS_2.Text = ""
+PEMBATAS_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_2.TextSize = 14.000
+
+PEMBATAS_3.Name = "PEMBATAS"
+PEMBATAS_3.Parent = Pembatas
+PEMBATAS_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_3.BorderSizePixel = 0
+PEMBATAS_3.Position = UDim2.new(0.0032258064, 0, -0.0507246368, 0)
+PEMBATAS_3.Size = UDim2.new(0, -4, 0, 255)
+PEMBATAS_3.Font = Enum.Font.SourceSans
+PEMBATAS_3.Text = ""
+PEMBATAS_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_3.TextSize = 14.000
+
+PEMBATAS_4.Name = "PEMBATAS"
+PEMBATAS_4.Parent = Pembatas
+PEMBATAS_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_4.BorderSizePixel = 0
+PEMBATAS_4.Position = UDim2.new(1.87096775, 0, -0.224637687, 0)
+PEMBATAS_4.Size = UDim2.new(0, -4, 0, 277)
+PEMBATAS_4.Font = Enum.Font.SourceSans
+PEMBATAS_4.Text = ""
+PEMBATAS_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_4.TextSize = 14.000
+
+PEMBATAS_5.Name = "PEMBATAS"
+PEMBATAS_5.Parent = Pembatas
+PEMBATAS_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_5.BorderSizePixel = 0
+PEMBATAS_5.Position = UDim2.new(1.50645161, 0, -0.231674418, 0)
+PEMBATAS_5.Size = UDim2.new(0, -4, 0, 279)
+PEMBATAS_5.Font = Enum.Font.SourceSans
+PEMBATAS_5.Text = ""
+PEMBATAS_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_5.TextSize = 14.000
+
+PEMBATAS_6.Name = "PEMBATAS"
+PEMBATAS_6.Parent = Pembatas
+PEMBATAS_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_6.BorderSizePixel = 0
+PEMBATAS_6.Position = UDim2.new(1.87096775, 0, 1.73934007, 0)
+PEMBATAS_6.Size = UDim2.new(0, -115, 0, 9)
+PEMBATAS_6.Font = Enum.Font.SourceSans
+PEMBATAS_6.Text = ""
+PEMBATAS_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_6.TextSize = 14.000
+
+PEMBATAS_7.Name = "PEMBATAS"
+PEMBATAS_7.Parent = Pembatas
+PEMBATAS_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PEMBATAS_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_7.BorderSizePixel = 0
+PEMBATAS_7.Position = UDim2.new(1.87096775, 0, -0.296891809, 0)
+PEMBATAS_7.Size = UDim2.new(0, -117, 0, 9)
+PEMBATAS_7.Font = Enum.Font.SourceSans
+PEMBATAS_7.Text = ""
+PEMBATAS_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+PEMBATAS_7.TextSize = 14.000
 
 Notif.Name = "Notif"
 Notif.Parent = Open
@@ -311,7 +518,7 @@ Notif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Notif.BackgroundTransparency = 1.000
 Notif.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Notif.BorderSizePixel = 0
-Notif.Position = UDim2.new(0, 0, 0.637681186, 0)
+Notif.Position = UDim2.new(0.748387098, 0, 0.224637687, 0)
 Notif.Size = UDim2.new(0, 136, 0, 50)
 Notif.Visible = false
 Notif.Font = Enum.Font.Arial
@@ -333,7 +540,20 @@ usnBtn.Text = "□ LocalName"
 usnBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 usnBtn.TextSize = 17.000
 
-UICorner_3.Parent = usnBtn
+UICorner_7.Parent = usnBtn
+
+RND.Name = "RND"
+RND.Parent = Open
+RND.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RND.BackgroundTransparency = 1.000
+RND.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RND.BorderSizePixel = 0
+RND.Position = UDim2.new(-0.0516129024, 0, 0.855072439, 0)
+RND.Size = UDim2.new(0, 120, 0, 24)
+RND.Font = Enum.Font.Arial
+RND.Text = "File Name"
+RND.TextColor3 = Color3.fromRGB(255, 255, 255)
+RND.TextSize = 17.000
 
 OpenFrame.Name = "OpenFrame"
 OpenFrame.Parent = cedit
@@ -347,25 +567,12 @@ OpenFrame.Text = "+"
 OpenFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenFrame.TextSize = 17.000
 
-UICorner_4.CornerRadius = UDim.new(2, 0)
-UICorner_4.Parent = OpenFrame
+UICorner_8.CornerRadius = UDim.new(2, 0)
+UICorner_8.Parent = OpenFrame
 
 -- Scripts:
 
-local function NIZBDWH_fake_script() -- Open.scRGBCorner 
-	local script = Instance.new('LocalScript', Open)
-
-	local gradient = script.Parent:WaitForChild("UIGradient")
-	
-	while true do
-		for i = 0, 1, 0.005 do
-			gradient.Rotation = i * 360
-			task.wait(0.01)
-		end
-	end
-end
-coroutine.wrap(NIZBDWH_fake_script)()
-local function JKEYBT_fake_script() -- Open.drg 
+local function EHRKXS_fake_script() -- Open.drg 
 	local script = Instance.new('LocalScript', Open)
 
 	local frame = script.Parent
@@ -408,8 +615,8 @@ local function JKEYBT_fake_script() -- Open.drg
 	end)
 	
 end
-coroutine.wrap(JKEYBT_fake_script)()
-local function OOQWLMG_fake_script() -- Open.handler 
+coroutine.wrap(EHRKXS_fake_script)()
+local function COSYUD_fake_script() -- Open.handler 
 	local script = Instance.new('LocalScript', Open)
 
 	--[[ FRAME / BUTTON / TEXTBOX HANDLER ]]
@@ -620,16 +827,16 @@ local function OOQWLMG_fake_script() -- Open.handler
 		Tunererr(username_s1, brake_s1, hp_s1, sc_s1, scAmount_s1, tc_s1, tcAmount_s1, "Reset")
 	end)
 end
-coroutine.wrap(OOQWLMG_fake_script)()
-local function ZAMWLC_fake_script() -- usn.usner 
+coroutine.wrap(COSYUD_fake_script)()
+local function RSPDYDS_fake_script() -- usn.usner 
 	local script = Instance.new('LocalScript', usn)
 
 	local label = script.Parent
 	local player = game.Players.LocalPlayer
 	label.Text = player.Name
 end
-coroutine.wrap(ZAMWLC_fake_script)()
-local function HQOYLWG_fake_script() -- Brake.number 
+coroutine.wrap(RSPDYDS_fake_script)()
+local function WKAYYSZ_fake_script() -- Brake.number 
 	local script = Instance.new('LocalScript', Brake)
 
 	local textbox = script.Parent
@@ -643,8 +850,8 @@ local function HQOYLWG_fake_script() -- Brake.number
 	end)
 	
 end
-coroutine.wrap(HQOYLWG_fake_script)()
-local function KEER_fake_script() -- HP.number 
+coroutine.wrap(WKAYYSZ_fake_script)()
+local function XCCBIUR_fake_script() -- HP.number 
 	local script = Instance.new('LocalScript', HP)
 
 	local textbox = script.Parent
@@ -658,8 +865,8 @@ local function KEER_fake_script() -- HP.number
 	end)
 	
 end
-coroutine.wrap(KEER_fake_script)()
-local function YWYNO_fake_script() -- SuperCharger.number 
+coroutine.wrap(XCCBIUR_fake_script)()
+local function DRMNU_fake_script() -- SuperCharger.number 
 	local script = Instance.new('LocalScript', SuperCharger)
 
 	local textbox = script.Parent
@@ -673,8 +880,8 @@ local function YWYNO_fake_script() -- SuperCharger.number
 	end)
 	
 end
-coroutine.wrap(YWYNO_fake_script)()
-local function ZIKHU_fake_script() -- SuperChargerBoost.number 
+coroutine.wrap(DRMNU_fake_script)()
+local function SNMV_fake_script() -- SuperChargerBoost.number 
 	local script = Instance.new('LocalScript', SuperChargerBoost)
 
 	local textbox = script.Parent
@@ -688,8 +895,8 @@ local function ZIKHU_fake_script() -- SuperChargerBoost.number
 	end)
 	
 end
-coroutine.wrap(ZIKHU_fake_script)()
-local function BNSNLQW_fake_script() -- TurboCharger.number 
+coroutine.wrap(SNMV_fake_script)()
+local function LSRRB_fake_script() -- TurboCharger.number 
 	local script = Instance.new('LocalScript', TurboCharger)
 
 	local textbox = script.Parent
@@ -703,8 +910,8 @@ local function BNSNLQW_fake_script() -- TurboCharger.number
 	end)
 	
 end
-coroutine.wrap(BNSNLQW_fake_script)()
-local function WVJWUP_fake_script() -- TurboChargerBoost.number 
+coroutine.wrap(LSRRB_fake_script)()
+local function HZSPV_fake_script() -- TurboChargerBoost.number 
 	local script = Instance.new('LocalScript', TurboChargerBoost)
 
 	local textbox = script.Parent
@@ -718,8 +925,95 @@ local function WVJWUP_fake_script() -- TurboChargerBoost.number
 	end)
 	
 end
-coroutine.wrap(WVJWUP_fake_script)()
-local function AOAS_fake_script() -- usnBtn.usnBtnHandler 
+coroutine.wrap(HZSPV_fake_script)()
+local function BRAHH_fake_script() -- LoadConfig.LocalScript 
+	local script = Instance.new('LocalScript', LoadConfig)
+
+	local frame = script.Parent
+	local template = frame.Template
+	
+	local falsed = true
+	if falsed == true then return end
+	
+	local list = {
+		-- MAX 8
+	}
+	
+	local yOffset = 0
+	
+	for i, name in ipairs(list) do
+		local item = template:Clone()
+		item.Visible = true
+		item.Parent = frame
+	
+		item.Text = i .. ". " .. name
+		item.Position = UDim2.new(0, 0, 0, yOffset)
+	
+		yOffset = yOffset + item.AbsoluteSize.Y + 5
+	
+		item.MouseButton1Click:Connect(function()
+		end)
+	end
+	
+end
+coroutine.wrap(BRAHH_fake_script)()
+local function TYKSYU_fake_script() -- Other.LocalScript 
+	local script = Instance.new('LocalScript', Other)
+
+	local frame = script.Parent
+	local template = frame.Template
+	
+	local falsed = true
+	if falsed == true then return end
+	
+	local list = {
+		-- MAX 8
+	}
+	
+	local yOffset = 0
+	
+	for i, name in ipairs(list) do
+		local item = template:Clone()
+		item.Visible = true
+		item.Parent = frame
+	
+		item.Text = i .. ". " .. name
+		item.Position = UDim2.new(0, 0, 0, yOffset)
+	
+		yOffset = yOffset + item.AbsoluteSize.Y + 5
+	
+		item.MouseButton1Click:Connect(function()
+		end)
+	end
+	
+end
+coroutine.wrap(TYKSYU_fake_script)()
+local function RCTBCZ_fake_script() -- Tuning.PembatasFrame 
+	local script = Instance.new('LocalScript', Tuning)
+
+	local RunService = game:GetService("RunService")
+	local folder = script.Parent:WaitForChild("Pembatas")
+	
+	local pembatas = {}
+	for _, obj in ipairs(folder:GetChildren()) do
+		if (obj:IsA("Frame") or obj:IsA("TextLabel") or obj:IsA("TextButton")) and obj.Name == "PEMBATAS" then
+			table.insert(pembatas, obj)
+		end
+	end
+	
+	local hue = 0
+	
+	RunService.RenderStepped:Connect(function()
+		hue = (hue + 0.003) % 1
+		local color = Color3.fromHSV(hue, 1, 1)
+		for _, item in ipairs(pembatas) do
+			item.BackgroundColor3 = color
+		end
+	end)
+	
+end
+coroutine.wrap(RCTBCZ_fake_script)()
+local function IZBHOHF_fake_script() -- usnBtn.usnBtnHandler 
 	local script = Instance.new('LocalScript', usnBtn)
 
 	local button = script.Parent
@@ -743,8 +1037,8 @@ local function AOAS_fake_script() -- usnBtn.usnBtnHandler
 		end
 	end)
 end
-coroutine.wrap(AOAS_fake_script)()
-local function HUEVY_fake_script() -- OpenFrame.drg 
+coroutine.wrap(IZBHOHF_fake_script)()
+local function TZTDVW_fake_script() -- OpenFrame.drg 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -787,8 +1081,8 @@ local function HUEVY_fake_script() -- OpenFrame.drg
 	end)
 	
 end
-coroutine.wrap(HUEVY_fake_script)()
-local function IOAOP_fake_script() -- OpenFrame.callframe 
+coroutine.wrap(TZTDVW_fake_script)()
+local function LVFH_fake_script() -- OpenFrame.callframe 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -802,4 +1096,4 @@ local function IOAOP_fake_script() -- OpenFrame.callframe
 		end
 	end)
 end
-coroutine.wrap(IOAOP_fake_script)()
+coroutine.wrap(LVFH_fake_script)()
