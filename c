@@ -51,7 +51,7 @@ local Notif = Instance.new("TextLabel")
 local usnBtn = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local RND = Instance.new("TextLabel")
-local OpenFrame = Instance.new("TextButton")
+local OpenFrame = Instance.new("ImageButton")
 local UICorner_8 = Instance.new("UICorner")
 
 --Properties:
@@ -65,7 +65,7 @@ Open.Parent = cedit
 Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0.194746375, 0, 0.344947308, 0)
+Open.Position = UDim2.new(0.205615938, 0, 0.344947308, 0)
 Open.Size = UDim2.new(0, 310, 0, 138)
 Open.Visible = false
 
@@ -77,6 +77,7 @@ usn.BorderColor3 = Color3.fromRGB(0, 0, 0)
 usn.BorderSizePixel = 0
 usn.Position = UDim2.new(0.0354838707, 0, 0.224637687, 0)
 usn.Size = UDim2.new(0, 119, 0, 26)
+usn.ClearTextOnFocus = false
 usn.Font = Enum.Font.SourceSans
 usn.Text = ""
 usn.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -536,7 +537,7 @@ usnBtn.BorderSizePixel = 0
 usnBtn.Position = UDim2.new(0.0612903237, 0, 0.5, 0)
 usnBtn.Size = UDim2.new(0, 102, 0, 25)
 usnBtn.Font = Enum.Font.Arial
-usnBtn.Text = "□ LocalName"
+usnBtn.Text = "☑ LocalName"
 usnBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 usnBtn.TextSize = 17.000
 
@@ -557,22 +558,19 @@ RND.TextSize = 17.000
 
 OpenFrame.Name = "OpenFrame"
 OpenFrame.Parent = cedit
-OpenFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.BackgroundColor3 = Color3.fromRGB(102, 110, 117)
 OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenFrame.BorderSizePixel = 0
-OpenFrame.Position = UDim2.new(0.15126811, 0, 0.489550531, 0)
-OpenFrame.Size = UDim2.new(0, 41, 0, 33)
-OpenFrame.Font = Enum.Font.Arial
-OpenFrame.Text = "+"
-OpenFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenFrame.TextSize = 17.000
+OpenFrame.Position = UDim2.new(0.122282609, 0, 0.443946183, 0)
+OpenFrame.Size = UDim2.new(0, 85, 0, 79)
+OpenFrame.Image = "rbxassetid://111851901427385"
 
 UICorner_8.CornerRadius = UDim.new(2, 0)
 UICorner_8.Parent = OpenFrame
 
 -- Scripts:
 
-local function EHRKXS_fake_script() -- Open.drg 
+local function CCSH_fake_script() -- Open.drg 
 	local script = Instance.new('LocalScript', Open)
 
 	local frame = script.Parent
@@ -615,17 +613,18 @@ local function EHRKXS_fake_script() -- Open.drg
 	end)
 	
 end
-coroutine.wrap(EHRKXS_fake_script)()
-local function COSYUD_fake_script() -- Open.handler 
+coroutine.wrap(CCSH_fake_script)()
+local function HUZOQAQ_fake_script() -- Open.handler 
 	local script = Instance.new('LocalScript', Open)
 
 	--[[ FRAME / BUTTON / TEXTBOX HANDLER ]]
 	
 	local Username_TBName1 = ""
 	local UsernameBtn_TB = script.Parent:WaitForChild("usnBtn")
+	local USNNN = script.Parent:WaitForChild("usn")
 	
 	if UsernameBtn_TB.Text == "□ LocalName" then
-		Username_TBName1 = script.Parent:WaitForChild("usn")
+		Username_TBName1 = USNNN.Text
 	elseif UsernameBtn_TB.Text == "☑ LocalName" then
 		local player = game.Players.LocalPlayer
 		Username_TBName1 = player.Name
@@ -688,6 +687,8 @@ local function COSYUD_fake_script() -- Open.handler
 	
 	local function Tunererr (username_s2, hp_s2, sc_s2, scAmount_s2, tc_s2, tcAmount_s2, tunertype)
 		
+		print(Username_TBName1)
+		
 		if Username_TBName1 == "" then
 			ButtonHandler(true)
 			Notification("Warn", "Gagal mendapatkan Data Mobil, Username tidak terdeteksi / kosong!")
@@ -725,6 +726,8 @@ local function COSYUD_fake_script() -- Open.handler
 		end
 		
 		print("Starting tuner...")
+		
+		print(Username_TBName1)
 	
 		local playerName = Username_TBName1
 		local ws_Car = workspace:FindFirstChild("Vehicles") and workspace.Vehicles:FindFirstChild(playerName.."sCar")
@@ -824,19 +827,44 @@ local function COSYUD_fake_script() -- Open.handler
 	
 	ResetTune.MouseButton1Click:Connect(function()
 		ButtonHandler(false)
-		Tunererr(username_s1, brake_s1, hp_s1, sc_s1, scAmount_s1, tc_s1, tcAmount_s1, "Reset")
+		Tunererr(username_s1, hp_s1, sc_s1, scAmount_s1, tc_s1, tcAmount_s1, "Reset")
 	end)
 end
-coroutine.wrap(COSYUD_fake_script)()
-local function RSPDYDS_fake_script() -- usn.usner 
+coroutine.wrap(HUZOQAQ_fake_script)()
+local function NRPWHK_fake_script() -- usn.usner 
 	local script = Instance.new('LocalScript', usn)
 
 	local label = script.Parent
 	local player = game.Players.LocalPlayer
 	label.Text = player.Name
 end
-coroutine.wrap(RSPDYDS_fake_script)()
-local function WKAYYSZ_fake_script() -- Brake.number 
+coroutine.wrap(NRPWHK_fake_script)()
+local function VUIXD_fake_script() -- Tuning.PembatasFrame 
+	local script = Instance.new('LocalScript', Tuning)
+
+	local RunService = game:GetService("RunService")
+	local folder = script.Parent:WaitForChild("Pembatas")
+	
+	local pembatas = {}
+	for _, obj in ipairs(folder:GetChildren()) do
+		if (obj:IsA("Frame") or obj:IsA("TextLabel") or obj:IsA("TextButton")) and obj.Name == "PEMBATAS" then
+			table.insert(pembatas, obj)
+		end
+	end
+	
+	local hue = 0
+	
+	RunService.RenderStepped:Connect(function()
+		hue = (hue + 0.003) % 1
+		local color = Color3.fromHSV(hue, 1, 1)
+		for _, item in ipairs(pembatas) do
+			item.BackgroundColor3 = color
+		end
+	end)
+	
+end
+coroutine.wrap(VUIXD_fake_script)()
+local function BDSC_fake_script() -- Brake.number 
 	local script = Instance.new('LocalScript', Brake)
 
 	local textbox = script.Parent
@@ -850,8 +878,8 @@ local function WKAYYSZ_fake_script() -- Brake.number
 	end)
 	
 end
-coroutine.wrap(WKAYYSZ_fake_script)()
-local function XCCBIUR_fake_script() -- HP.number 
+coroutine.wrap(BDSC_fake_script)()
+local function MSKVGUN_fake_script() -- HP.number 
 	local script = Instance.new('LocalScript', HP)
 
 	local textbox = script.Parent
@@ -865,8 +893,8 @@ local function XCCBIUR_fake_script() -- HP.number
 	end)
 	
 end
-coroutine.wrap(XCCBIUR_fake_script)()
-local function DRMNU_fake_script() -- SuperCharger.number 
+coroutine.wrap(MSKVGUN_fake_script)()
+local function JUGTA_fake_script() -- SuperCharger.number 
 	local script = Instance.new('LocalScript', SuperCharger)
 
 	local textbox = script.Parent
@@ -880,8 +908,8 @@ local function DRMNU_fake_script() -- SuperCharger.number
 	end)
 	
 end
-coroutine.wrap(DRMNU_fake_script)()
-local function SNMV_fake_script() -- SuperChargerBoost.number 
+coroutine.wrap(JUGTA_fake_script)()
+local function UWMPWXR_fake_script() -- SuperChargerBoost.number 
 	local script = Instance.new('LocalScript', SuperChargerBoost)
 
 	local textbox = script.Parent
@@ -895,8 +923,8 @@ local function SNMV_fake_script() -- SuperChargerBoost.number
 	end)
 	
 end
-coroutine.wrap(SNMV_fake_script)()
-local function LSRRB_fake_script() -- TurboCharger.number 
+coroutine.wrap(UWMPWXR_fake_script)()
+local function YQCFZX_fake_script() -- TurboCharger.number 
 	local script = Instance.new('LocalScript', TurboCharger)
 
 	local textbox = script.Parent
@@ -910,8 +938,8 @@ local function LSRRB_fake_script() -- TurboCharger.number
 	end)
 	
 end
-coroutine.wrap(LSRRB_fake_script)()
-local function HZSPV_fake_script() -- TurboChargerBoost.number 
+coroutine.wrap(YQCFZX_fake_script)()
+local function OLWZRWA_fake_script() -- TurboChargerBoost.number 
 	local script = Instance.new('LocalScript', TurboChargerBoost)
 
 	local textbox = script.Parent
@@ -925,8 +953,8 @@ local function HZSPV_fake_script() -- TurboChargerBoost.number
 	end)
 	
 end
-coroutine.wrap(HZSPV_fake_script)()
-local function BRAHH_fake_script() -- LoadConfig.LocalScript 
+coroutine.wrap(OLWZRWA_fake_script)()
+local function ZYMLULA_fake_script() -- LoadConfig.LocalScript 
 	local script = Instance.new('LocalScript', LoadConfig)
 
 	local frame = script.Parent
@@ -956,8 +984,8 @@ local function BRAHH_fake_script() -- LoadConfig.LocalScript
 	end
 	
 end
-coroutine.wrap(BRAHH_fake_script)()
-local function TYKSYU_fake_script() -- Other.LocalScript 
+coroutine.wrap(ZYMLULA_fake_script)()
+local function NKNWRYY_fake_script() -- Other.LocalScript 
 	local script = Instance.new('LocalScript', Other)
 
 	local frame = script.Parent
@@ -987,33 +1015,8 @@ local function TYKSYU_fake_script() -- Other.LocalScript
 	end
 	
 end
-coroutine.wrap(TYKSYU_fake_script)()
-local function RCTBCZ_fake_script() -- Tuning.PembatasFrame 
-	local script = Instance.new('LocalScript', Tuning)
-
-	local RunService = game:GetService("RunService")
-	local folder = script.Parent:WaitForChild("Pembatas")
-	
-	local pembatas = {}
-	for _, obj in ipairs(folder:GetChildren()) do
-		if (obj:IsA("Frame") or obj:IsA("TextLabel") or obj:IsA("TextButton")) and obj.Name == "PEMBATAS" then
-			table.insert(pembatas, obj)
-		end
-	end
-	
-	local hue = 0
-	
-	RunService.RenderStepped:Connect(function()
-		hue = (hue + 0.003) % 1
-		local color = Color3.fromHSV(hue, 1, 1)
-		for _, item in ipairs(pembatas) do
-			item.BackgroundColor3 = color
-		end
-	end)
-	
-end
-coroutine.wrap(RCTBCZ_fake_script)()
-local function IZBHOHF_fake_script() -- usnBtn.usnBtnHandler 
+coroutine.wrap(NKNWRYY_fake_script)()
+local function UJHNT_fake_script() -- usnBtn.usnBtnHandler 
 	local script = Instance.new('LocalScript', usnBtn)
 
 	local button = script.Parent
@@ -1037,8 +1040,23 @@ local function IZBHOHF_fake_script() -- usnBtn.usnBtnHandler
 		end
 	end)
 end
-coroutine.wrap(IZBHOHF_fake_script)()
-local function TZTDVW_fake_script() -- OpenFrame.drg 
+coroutine.wrap(UJHNT_fake_script)()
+local function EHOHVOD_fake_script() -- OpenFrame.callframe 
+	local script = Instance.new('LocalScript', OpenFrame)
+
+	local button = script.Parent
+	local frame = button.Parent:WaitForChild("Open")
+	
+	button.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		else
+			frame.Visible = false
+		end
+	end)
+end
+coroutine.wrap(EHOHVOD_fake_script)()
+local function GXRXB_fake_script() -- OpenFrame.drg 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1081,19 +1099,4 @@ local function TZTDVW_fake_script() -- OpenFrame.drg
 	end)
 	
 end
-coroutine.wrap(TZTDVW_fake_script)()
-local function LVFH_fake_script() -- OpenFrame.callframe 
-	local script = Instance.new('LocalScript', OpenFrame)
-
-	local button = script.Parent
-	local frame = button.Parent:WaitForChild("Open")
-	
-	button.MouseButton1Click:Connect(function()
-		if frame.Visible == false then
-			frame.Visible = true
-		else
-			frame.Visible = false
-		end
-	end)
-end
-coroutine.wrap(LVFH_fake_script)()
+coroutine.wrap(GXRXB_fake_script)()
