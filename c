@@ -26,18 +26,24 @@ local ResetTune = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local SetTune = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
+local OtherFrame = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
 local ConfigFrame = Instance.new("Frame")
 local SaveConfig = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local DeleteConfig = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
+local DeleteConfig = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
 local TuningFileName = Instance.new("TextBox")
 local LoadConfig = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding = Instance.new("UIPadding")
+local ScrollingFrame = Instance.new("ScrollingFrame")
 local Template = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
 local Other = Instance.new("Frame")
 local Template_2 = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 local ConfigTune = Instance.new("TextLabel")
 local Pembatas = Instance.new("Folder")
 local PEMBATAS = Instance.new("TextLabel")
@@ -49,10 +55,14 @@ local PEMBATAS_6 = Instance.new("TextLabel")
 local PEMBATAS_7 = Instance.new("TextLabel")
 local Notif = Instance.new("TextLabel")
 local usnBtn = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local RND = Instance.new("TextLabel")
 local OpenFrame = Instance.new("ImageButton")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
+local Misc = Instance.new("Frame")
+local Rejoin = Instance.new("TextButton")
+local RejoinInfo = Instance.new("TextLabel")
+local MainFrameBtn = Instance.new("TextButton")
 
 --Properties:
 
@@ -311,6 +321,22 @@ SetTune.TextWrapped = true
 
 UICorner_2.Parent = SetTune
 
+OtherFrame.Name = "OtherFrame"
+OtherFrame.Parent = TunnerFrame
+OtherFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+OtherFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OtherFrame.BorderSizePixel = 0
+OtherFrame.Position = UDim2.new(0.363076925, 0, 0.836528957, 0)
+OtherFrame.Size = UDim2.new(0, 89, 0, 22)
+OtherFrame.Font = Enum.Font.Arial
+OtherFrame.Text = "Misc"
+OtherFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
+OtherFrame.TextScaled = true
+OtherFrame.TextSize = 17.000
+OtherFrame.TextWrapped = true
+
+UICorner_3.Parent = OtherFrame
+
 ConfigFrame.Name = "ConfigFrame"
 ConfigFrame.Parent = Tuning
 ConfigFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -333,7 +359,7 @@ SaveConfig.TextScaled = true
 SaveConfig.TextSize = 17.000
 SaveConfig.TextWrapped = true
 
-UICorner_3.Parent = SaveConfig
+UICorner_4.Parent = SaveConfig
 
 DeleteConfig.Name = "DeleteConfig"
 DeleteConfig.Parent = ConfigFrame
@@ -349,7 +375,7 @@ DeleteConfig.TextScaled = true
 DeleteConfig.TextSize = 17.000
 DeleteConfig.TextWrapped = true
 
-UICorner_4.Parent = DeleteConfig
+UICorner_5.Parent = DeleteConfig
 
 TuningFileName.Name = "TuningFileName"
 TuningFileName.Parent = ConfigFrame
@@ -371,13 +397,26 @@ LoadConfig.BorderSizePixel = 0
 LoadConfig.Position = UDim2.new(3.40441179, 0, -1.32692313, 0)
 LoadConfig.Size = UDim2.new(0, 117, 0, 242)
 
+UIListLayout.Parent = LoadConfig
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+UIPadding.Parent = LoadConfig
+
+ScrollingFrame.Parent = LoadConfig
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(-0.025641026, 0, -0.00413223123, 0)
+ScrollingFrame.Size = UDim2.new(0, 113, 0, 240)
+
 Template.Name = "Template"
-Template.Parent = LoadConfig
+Template.Parent = ScrollingFrame
 Template.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 Template.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Template.BorderSizePixel = 0
-Template.Position = UDim2.new(0.0421961583, 0, 0.0069388398, 0)
-Template.Size = UDim2.new(0, 112, 0, 24)
+Template.Position = UDim2.new(0.017699115, 0, 0.0152362827, 0)
+Template.Size = UDim2.new(0, 94, 0, 24)
 Template.Visible = false
 Template.Font = Enum.Font.Arial
 Template.Text = ""
@@ -386,7 +425,10 @@ Template.TextScaled = true
 Template.TextSize = 17.000
 Template.TextWrapped = true
 
-UICorner_5.Parent = Template
+UICorner_6.Parent = Template
+
+UIListLayout_2.Parent = ScrollingFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 
 Other.Name = "Other"
 Other.Parent = ConfigFrame
@@ -411,7 +453,7 @@ Template_2.TextScaled = true
 Template_2.TextSize = 17.000
 Template_2.TextWrapped = true
 
-UICorner_6.Parent = Template_2
+UICorner_7.Parent = Template_2
 
 ConfigTune.Name = "Config Tune"
 ConfigTune.Parent = Other
@@ -419,7 +461,7 @@ ConfigTune.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ConfigTune.BackgroundTransparency = 1.000
 ConfigTune.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ConfigTune.BorderSizePixel = 0
-ConfigTune.Position = UDim2.new(-0.273519933, 0, -0.0313248187, 0)
+ConfigTune.Position = UDim2.new(-0.307707965, 0, -0.0313248187, 0)
 ConfigTune.Size = UDim2.new(0, 189, 0, 31)
 ConfigTune.Font = Enum.Font.Arial
 ConfigTune.Text = "Config Tune"
@@ -434,8 +476,8 @@ PEMBATAS.Parent = Pembatas
 PEMBATAS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PEMBATAS.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PEMBATAS.BorderSizePixel = 0
-PEMBATAS.Position = UDim2.new(1.5, 0, -0.00724637695, 0)
-PEMBATAS.Size = UDim2.new(0, -465, 0, -6)
+PEMBATAS.Position = UDim2.new(1.87096775, 0, 0, 0)
+PEMBATAS.Size = UDim2.new(0, -580, 0, -6)
 PEMBATAS.Font = Enum.Font.SourceSans
 PEMBATAS.Text = ""
 PEMBATAS.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -458,8 +500,8 @@ PEMBATAS_3.Parent = Pembatas
 PEMBATAS_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PEMBATAS_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PEMBATAS_3.BorderSizePixel = 0
-PEMBATAS_3.Position = UDim2.new(0.0032258064, 0, -0.0507246368, 0)
-PEMBATAS_3.Size = UDim2.new(0, -4, 0, 255)
+PEMBATAS_3.Position = UDim2.new(0, 0, -0.0434782617, 0)
+PEMBATAS_3.Size = UDim2.new(0, -3, 0, 255)
 PEMBATAS_3.Font = Enum.Font.SourceSans
 PEMBATAS_3.Text = ""
 PEMBATAS_3.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -482,8 +524,8 @@ PEMBATAS_5.Parent = Pembatas
 PEMBATAS_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PEMBATAS_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PEMBATAS_5.BorderSizePixel = 0
-PEMBATAS_5.Position = UDim2.new(1.50645161, 0, -0.231674418, 0)
-PEMBATAS_5.Size = UDim2.new(0, -4, 0, 279)
+PEMBATAS_5.Position = UDim2.new(1.49354839, 0, -0.289645433, 0)
+PEMBATAS_5.Size = UDim2.new(0, -2, 0, 289)
 PEMBATAS_5.Font = Enum.Font.SourceSans
 PEMBATAS_5.Text = ""
 PEMBATAS_5.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -541,7 +583,7 @@ usnBtn.Text = "☑ LocalName"
 usnBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 usnBtn.TextSize = 17.000
 
-UICorner_7.Parent = usnBtn
+UICorner_8.Parent = usnBtn
 
 RND.Name = "RND"
 RND.Parent = Open
@@ -561,16 +603,66 @@ OpenFrame.Parent = cedit
 OpenFrame.BackgroundColor3 = Color3.fromRGB(102, 110, 117)
 OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenFrame.BorderSizePixel = 0
-OpenFrame.Position = UDim2.new(0.122282609, 0, 0.443946183, 0)
-OpenFrame.Size = UDim2.new(0, 85, 0, 79)
+OpenFrame.Position = UDim2.new(0.129528984, 0, 0.432735413, 0)
+OpenFrame.Size = UDim2.new(0, 74, 0, 60)
 OpenFrame.Image = "rbxassetid://111851901427385"
 
-UICorner_8.CornerRadius = UDim.new(2, 0)
-UICorner_8.Parent = OpenFrame
+UICorner_9.CornerRadius = UDim.new(2, 0)
+UICorner_9.Parent = OpenFrame
+
+Misc.Name = "Misc"
+Misc.Parent = cedit
+Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Misc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(0.210144922, 0, 0.177130044, 0)
+Misc.Size = UDim2.new(0, 218, 0, 296)
+Misc.Visible = false
+
+Rejoin.Name = "Rejoin"
+Rejoin.Parent = Misc
+Rejoin.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Rejoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rejoin.BorderSizePixel = 0
+Rejoin.Position = UDim2.new(0.188073397, 0, 0.111486487, 0)
+Rejoin.Size = UDim2.new(0, 136, 0, 34)
+Rejoin.Font = Enum.Font.Arial
+Rejoin.Text = "Rejoin Server"
+Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
+Rejoin.TextScaled = true
+Rejoin.TextSize = 17.000
+Rejoin.TextWrapped = true
+
+RejoinInfo.Name = "RejoinInfo"
+RejoinInfo.Parent = Misc
+RejoinInfo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RejoinInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RejoinInfo.BorderSizePixel = 0
+RejoinInfo.Position = UDim2.new(0.0412844047, 0, 0.263513505, 0)
+RejoinInfo.Size = UDim2.new(0, 200, 0, 50)
+RejoinInfo.Font = Enum.Font.Arial
+RejoinInfo.Text = "Note: Kalo kamu ngalamin lag, ga bisa masuk mobil, tombol masuk mobil ilang atau ga bisa ganti gigi / gas atau apapun itu atau STUCK, pencet ini aja"
+RejoinInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+RejoinInfo.TextScaled = true
+RejoinInfo.TextSize = 17.000
+RejoinInfo.TextWrapped = true
+
+MainFrameBtn.Name = "MainFrameBtn"
+MainFrameBtn.Parent = Misc
+MainFrameBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+MainFrameBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrameBtn.BorderSizePixel = 0
+MainFrameBtn.Position = UDim2.new(0.188073397, 0, 0.847972989, 0)
+MainFrameBtn.Size = UDim2.new(0, 136, 0, 29)
+MainFrameBtn.Font = Enum.Font.Arial
+MainFrameBtn.Text = "Back"
+MainFrameBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainFrameBtn.TextSize = 20.000
+MainFrameBtn.TextWrapped = true
 
 -- Scripts:
 
-local function CCSH_fake_script() -- Open.drg 
+local function BENJH_fake_script() -- Open.drg 
 	local script = Instance.new('LocalScript', Open)
 
 	local frame = script.Parent
@@ -613,13 +705,12 @@ local function CCSH_fake_script() -- Open.drg
 	end)
 	
 end
-coroutine.wrap(CCSH_fake_script)()
-local function HUZOQAQ_fake_script() -- Open.handler 
+coroutine.wrap(BENJH_fake_script)()
+local function FBESZC_fake_script() -- Open.handler 
 	local script = Instance.new('LocalScript', Open)
 
-	--[[ FRAME / BUTTON / TEXTBOX HANDLER ]]
-	
 	local Username_TBName1 = ""
+	local folderName = "DAN_CONFIG"
 	local UsernameBtn_TB = script.Parent:WaitForChild("usnBtn")
 	local USNNN = script.Parent:WaitForChild("usn")
 	
@@ -655,6 +746,7 @@ local function HUZOQAQ_fake_script() -- Open.handler
 	end
 	
 	local Tuner = script.Parent:WaitForChild("Tuning"):WaitForChild("TunnerFrame")
+	local Config = script.Parent:WaitForChild("Tuning"):WaitForChild("ConfigFrame")
 	
 	--local Brake_TB = Tuner:WaitForChild("Brake")
 	local HP_TB = Tuner:WaitForChild("HP")
@@ -665,10 +757,16 @@ local function HUZOQAQ_fake_script() -- Open.handler
 	
 	local SetTuner = Tuner:WaitForChild("SetTune")
 	local ResetTune = Tuner:WaitForChild("ResetTune")
+	local OtherFrame = Tuner:WaitForChild("OtherFrame")
 	
-	--[[ END FRAME / BUTTON / TEXTBOX HANDLER ]]
+	local saveConfig = Config:WaitForChild("SaveConfig")
+	local deleteConfig = Config:WaitForChild("DeleteConfig")
+	local FileNameConfig = Config:WaitForChild("TuningFileName")
 	
-	--[[ Reset Tune Handler ]]
+	--[[ Handler Misc Disini ]]
+	
+	local RejoinBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("Rejoin")
+	local MainFrameBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("MainFrameBtn")
 	
 	local username_s1 = ""
 	local brake_s1 = 0
@@ -678,7 +776,52 @@ local function HUZOQAQ_fake_script() -- Open.handler
 	local tc_s1 = 0
 	local tcAmount_s1 = 0
 	
-	--[[ End Reset Tune Handler ]]
+	local function WriteFiles (filename, tcAmount_Config, tcBoost_Config, scAmount_Config, scBoost_Config, HorsePower_Config)
+		
+		if HP_TB.Text == "" then
+			Notification("Warn", "Gagal mengsave HorsePower, Angka tidak terdeteksi!")
+			return
+		end
+		if SuperCharger_TB.Text == "" then
+			Notification("Warn", "Gagal mengsave SuperCharger, Angka tidak terdeteksi!")
+			return
+		end
+		if SuperChargerAmount_TB.Text == "" then
+			Notification("Warn", "Gagal mengsave SuperCharger Amount, Angka tidak terdeteksi!")
+			return
+		end
+		if TurboCharger_TB.Text == "" then
+			Notification("Warn", "Gagal mengsave TurboCharger, Angka tidak terdeteksi!")
+			return
+		end
+		if TurboChargerAmount_TB.Text == "" then
+			Notification("Warn", "Gagal mengsave TurboCharger Amount, Angka tidak terdeteksi!")
+			return
+		end
+		
+		if not isfolder("DAN_CONFIG") then
+			makefolder("DAN_CONFIG")
+		end
+	
+		local filePath = "DAN_CONFIG/"..filename..".json"
+		if isfile(filePath) then
+			warn("File sudah ada, proses dihentikan.")
+			return
+		end
+		local data = {
+			turboChargerAmount = tcAmount_Config,
+			turboChargerBoost = tcBoost_Config,
+			superChargerAmount = scAmount_Config,
+			superChargerBoost = scBoost_Config,
+			HorsePower = HorsePower_Config
+		}
+	
+		local jsonData = game:GetService("HttpService"):JSONEncode(data)
+	
+		writefile(filePath, jsonData)
+		Notification("Info", "Berhasil menyimpan Tuning "..filename)
+	
+	end
 	
 	local function ButtonHandler (bool)
 		SetTuner.Visible = bool
@@ -733,6 +876,7 @@ local function HUZOQAQ_fake_script() -- Open.handler
 		local ws_Car = workspace:FindFirstChild("Vehicles") and workspace.Vehicles:FindFirstChild(playerName.."sCar")
 	
 		if not ws_Car then
+			Notification("Err", "File mobil ga ketemu di ", playerName.."sCar")
 			warn("File mobil ga ketemu di ", playerName.."sCar")
 			ButtonHandler(true)
 			return
@@ -820,6 +964,162 @@ local function HUZOQAQ_fake_script() -- Open.handler
 		ButtonHandler(true)
 	end
 	
+	local Http = game:GetService("HttpService")
+	
+	if not isfolder(folderName) then
+		makefolder(folderName)
+	end
+	
+	local scroll = script.Parent:WaitForChild("Tuning"):WaitForChild("ConfigFrame"):WaitForChild("LoadConfig"):WaitForChild("ScrollingFrame")
+	local template = scroll:WaitForChild("Template")
+	
+	local function RenderButton(fileName)
+		if not fileName:find("%.json") then return end
+	
+		local filePath = folderName.."/"..fileName
+		if not isfile(filePath) then return end
+	
+		local btn = template:Clone()
+		btn.Name = fileName
+		btn.Visible = true
+		btn.Parent = scroll
+	
+		btn.Size = template.Size
+		btn.Text = fileName:gsub("%.json", "")
+		
+		btn.MouseButton1Click:Connect(function()
+			print("Selected:", fileName)
+			FileNameConfig.Text = fileName:gsub("%.json", "")
+			
+			local raw = readfile(filePath)
+			local data = Http:JSONDecode(raw)
+	
+			HP_TB.Text = data.HorsePower
+			SuperCharger_TB.Text = data.superChargerBoost
+			SuperChargerAmount_TB.Text = data.superChargerAmount
+			TurboCharger_TB.Text = data.turboChargerBoost
+			TurboChargerAmount_TB.Text = data.turboChargerAmount
+	
+			Notification("Info","Loaded tuning "..fileName:gsub("%.json",""))
+		end)
+	
+		return btn
+	end
+	
+	local function RefreshList()
+		for _, v in ipairs(scroll:GetChildren()) do
+			if v:IsA("TextButton") and v.Name ~= "Template" then
+				v:Destroy()
+			end
+		end
+	
+		local files = listfiles(folderName)
+	
+		for _, filePath in ipairs(files) do
+			local fileName = filePath:match("[^/]+$")
+			if fileName:find("%.json") then
+				RenderButton(fileName)
+			end
+		end
+	
+		scroll.CanvasSize = UDim2.new(
+			0, 0,
+			0, scroll.UIListLayout.AbsoluteContentSize.Y
+		)
+	end
+	
+	--[[local function RenderButton(fileName)
+		local filePath = "DAN_CONFIG/" .. fileName
+		if not fileName:find("%.json") then
+			return
+		end
+		if not isfile(filePath) then
+			warn("File tidak ditemukan:", fileName)
+			return
+		end
+		
+		local btn = template:Clone()
+		btn.Visible = true
+		btn.Parent = scroll
+		btn.Text = fileName:gsub("%.json", "")
+		btn.Active = true
+		btn.Selectable = true
+		btn.AutoButtonColor = true
+	
+		btn.Size = UDim2.new(template.Size.X.Scale, template.Size.X.Offset, template.Size.Y.Scale, template.Size.Y.Offset)
+		btn.LayoutOrder = #scroll:GetChildren()
+		
+		for _, v in ipairs(btn:GetChildren()) do
+			if v:IsA("Frame") or v:IsA("TextLabel") then
+				v.Active = false
+				v.Selectable = false
+			end
+		end
+	
+		btn.MouseButton1Click:Connect(function()
+			print("Show tuning:", fileName)
+			local Fikersd = fileName:gsub("%.json", "")
+			if isfile("DAN_CONFIG/"..Fikersd..".json") then
+				local raw = readfile("DAN_CONFIG/"..Fikersd..".json")
+				local filelar = game:GetService("HttpService"):JSONDecode(raw)
+	
+				HP_TB.Text = filelar.HorsePower
+				SuperCharger_TB.Text = filelar.superChargerBoost
+				SuperChargerAmount_TB.Text = filelar.superChargerBoost
+	
+				TurboCharger_TB.Text = filelar.turboChargerBoost
+				TurboChargerAmount_TB.Text = filelar.turboChargerAmount
+				Notification("Info", "Berhasil meng setting Tuning "..fileName:gsub("%.json", ""))
+			end
+		end)
+		
+		return btn
+	end
+	local function RefreshList()
+		for _, v in ipairs(scroll:GetChildren()) do
+			local isLayout = v:IsA("UIListLayout") or v:IsA("UIPadding")
+	
+			if not isLayout and v.Name ~= "Template" then
+				v:Destroy()
+			end
+		end
+	
+		local files = listfiles(folderName)
+	
+		for _, filePath in ipairs(files) do
+			local fileName = filePath:match("[^/]+$")
+			RenderButton(fileName)
+		end
+	
+		scroll.CanvasSize = UDim2.new(
+			0, 0,
+			0, scroll.UIListLayout.AbsoluteContentSize.Y
+		)
+	end]]
+	
+	local function ReadFileer (filename)
+		if isfile("DAN_CONFIG/"..filename..".json") then
+			local raw = readfile("DAN_CONFIG/"..filename..".json")
+			local filelar = game:GetService("HttpService"):JSONDecode(raw)
+	
+			HP_TB.Text = filelar.HorsePower
+			SuperCharger_TB.Text = filelar.superChargerBoost
+			SuperChargerAmount_TB.Text = filelar.superChargerBoost
+	
+			TurboCharger_TB.Text = filelar.turboChargerBoost
+			TurboChargerAmount_TB.Text = filelar. turboChargerAmount
+			RefreshList()
+		end
+	end
+	
+	scroll.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		scroll.CanvasSize = UDim2.new(0, 0, 0, scroll.UIListLayout.AbsoluteContentSize.Y)
+	end)
+	
+	RefreshList()
+	
+	print("LoadConfig list initialized!")
+	
 	SetTuner.MouseButton1Click:Connect(function()
 		ButtonHandler(false)
 		Tunererr(Username_TBName1, HP_TB.Text, SuperCharger_TB.Text, SuperChargerAmount_TB.Text, TurboCharger_TB.Text, TurboChargerAmount_TB.Text, "Set")
@@ -829,17 +1129,161 @@ local function HUZOQAQ_fake_script() -- Open.handler
 		ButtonHandler(false)
 		Tunererr(username_s1, hp_s1, sc_s1, scAmount_s1, tc_s1, tcAmount_s1, "Reset")
 	end)
+	
+	OtherFrame.MouseButton1Click:Connect(function()
+		local MainFrame = script.Parent.Parent:WaitForChild("Open")
+		local MiscFrame = script.Parent.Parent:WaitForChild("Misc")
+		if MainFrame.Visible == true then
+			MainFrame.Visible = false
+			MiscFrame.Visible = true
+		end
+	end)
+	
+	RejoinBtn.MouseButton1Click:Connect(function()
+		local TeleportService = game:GetService("TeleportService")
+		local Players = game:GetService("Players")
+	
+		local function Rejoin()
+			local player = Players.LocalPlayer
+			TeleportService:Teleport(game.PlaceId, player)
+		end
+	
+		Rejoin()
+	end)
+	
+	MainFrameBtn.MouseButton1Click:Connect(function()
+		local MainFrame = script.Parent.Parent:WaitForChild("Open")
+		local MiscFrame = script.Parent.Parent:WaitForChild("Misc")
+		if MiscFrame.Visible == true then
+			MainFrame.Visible = true
+			MiscFrame.Visible = false
+		end
+	end)
+	
+	saveConfig.MouseButton1Click:Connect(function()
+		if FileNameConfig.Text == "" then
+			Notification("Err", "Gagal menghapus file, file name tidak ada.")
+			return
+		end
+		WriteFiles(FileNameConfig.Text, TurboChargerAmount_TB.Text, TurboCharger_TB.Text, SuperChargerAmount_TB.Text, SuperCharger_TB.Text, HP_TB.Text)
+		wait(.50)
+		RefreshList()	
+	end)
+	
+	deleteConfig.MouseButton1Click:Connect(function()
+		if FileNameConfig.Text == "" then
+			Notification("Err", "Gagal menghapus file, file name tidak ada.")
+			return
+		end
+		if isfile("DAN_CONFIG/"..FileNameConfig.Text..".json") then
+			delfile("DAN_CONFIG/"..FileNameConfig.Text..".json")
+			Notification("Info", "Berhasil menghapus file ("..FileNameConfig.Text..").")
+			RefreshList()
+		else
+			Notification("Err", "Gagal menghapus file, file ("..FileNameConfig.Text..") tidak tersedia.")
+		end
+	end)
 end
-coroutine.wrap(HUZOQAQ_fake_script)()
-local function NRPWHK_fake_script() -- usn.usner 
+coroutine.wrap(FBESZC_fake_script)()
+local function FUMND_fake_script() -- usn.usner 
 	local script = Instance.new('LocalScript', usn)
 
 	local label = script.Parent
 	local player = game.Players.LocalPlayer
 	label.Text = player.Name
 end
-coroutine.wrap(NRPWHK_fake_script)()
-local function VUIXD_fake_script() -- Tuning.PembatasFrame 
+coroutine.wrap(FUMND_fake_script)()
+local function YDHZTPK_fake_script() -- Brake.number 
+	local script = Instance.new('LocalScript', Brake)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(YDHZTPK_fake_script)()
+local function XGKYAWI_fake_script() -- HP.number 
+	local script = Instance.new('LocalScript', HP)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(XGKYAWI_fake_script)()
+local function DIVNAS_fake_script() -- SuperCharger.number 
+	local script = Instance.new('LocalScript', SuperCharger)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(DIVNAS_fake_script)()
+local function CZGBO_fake_script() -- SuperChargerBoost.number 
+	local script = Instance.new('LocalScript', SuperChargerBoost)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(CZGBO_fake_script)()
+local function TRFDJ_fake_script() -- TurboCharger.number 
+	local script = Instance.new('LocalScript', TurboCharger)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(TRFDJ_fake_script)()
+local function VNSIXM_fake_script() -- TurboChargerBoost.number 
+	local script = Instance.new('LocalScript', TurboChargerBoost)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(VNSIXM_fake_script)()
+local function UZOP_fake_script() -- Tuning.PembatasFrame 
 	local script = Instance.new('LocalScript', Tuning)
 
 	local RunService = game:GetService("RunService")
@@ -863,160 +1307,8 @@ local function VUIXD_fake_script() -- Tuning.PembatasFrame
 	end)
 	
 end
-coroutine.wrap(VUIXD_fake_script)()
-local function BDSC_fake_script() -- Brake.number 
-	local script = Instance.new('LocalScript', Brake)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(BDSC_fake_script)()
-local function MSKVGUN_fake_script() -- HP.number 
-	local script = Instance.new('LocalScript', HP)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(MSKVGUN_fake_script)()
-local function JUGTA_fake_script() -- SuperCharger.number 
-	local script = Instance.new('LocalScript', SuperCharger)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(JUGTA_fake_script)()
-local function UWMPWXR_fake_script() -- SuperChargerBoost.number 
-	local script = Instance.new('LocalScript', SuperChargerBoost)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(UWMPWXR_fake_script)()
-local function YQCFZX_fake_script() -- TurboCharger.number 
-	local script = Instance.new('LocalScript', TurboCharger)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(YQCFZX_fake_script)()
-local function OLWZRWA_fake_script() -- TurboChargerBoost.number 
-	local script = Instance.new('LocalScript', TurboChargerBoost)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(OLWZRWA_fake_script)()
-local function ZYMLULA_fake_script() -- LoadConfig.LocalScript 
-	local script = Instance.new('LocalScript', LoadConfig)
-
-	local frame = script.Parent
-	local template = frame.Template
-	
-	local falsed = true
-	if falsed == true then return end
-	
-	local list = {
-		-- MAX 8
-	}
-	
-	local yOffset = 0
-	
-	for i, name in ipairs(list) do
-		local item = template:Clone()
-		item.Visible = true
-		item.Parent = frame
-	
-		item.Text = i .. ". " .. name
-		item.Position = UDim2.new(0, 0, 0, yOffset)
-	
-		yOffset = yOffset + item.AbsoluteSize.Y + 5
-	
-		item.MouseButton1Click:Connect(function()
-		end)
-	end
-	
-end
-coroutine.wrap(ZYMLULA_fake_script)()
-local function NKNWRYY_fake_script() -- Other.LocalScript 
-	local script = Instance.new('LocalScript', Other)
-
-	local frame = script.Parent
-	local template = frame.Template
-	
-	local falsed = true
-	if falsed == true then return end
-	
-	local list = {
-		-- MAX 8
-	}
-	
-	local yOffset = 0
-	
-	for i, name in ipairs(list) do
-		local item = template:Clone()
-		item.Visible = true
-		item.Parent = frame
-	
-		item.Text = i .. ". " .. name
-		item.Position = UDim2.new(0, 0, 0, yOffset)
-	
-		yOffset = yOffset + item.AbsoluteSize.Y + 5
-	
-		item.MouseButton1Click:Connect(function()
-		end)
-	end
-	
-end
-coroutine.wrap(NKNWRYY_fake_script)()
-local function UJHNT_fake_script() -- usnBtn.usnBtnHandler 
+coroutine.wrap(UZOP_fake_script)()
+local function NWPPFXN_fake_script() -- usnBtn.usnBtnHandler 
 	local script = Instance.new('LocalScript', usnBtn)
 
 	local button = script.Parent
@@ -1040,8 +1332,8 @@ local function UJHNT_fake_script() -- usnBtn.usnBtnHandler
 		end
 	end)
 end
-coroutine.wrap(UJHNT_fake_script)()
-local function EHOHVOD_fake_script() -- OpenFrame.callframe 
+coroutine.wrap(NWPPFXN_fake_script)()
+local function KCCE_fake_script() -- OpenFrame.callframe 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1055,8 +1347,8 @@ local function EHOHVOD_fake_script() -- OpenFrame.callframe
 		end
 	end)
 end
-coroutine.wrap(EHOHVOD_fake_script)()
-local function GXRXB_fake_script() -- OpenFrame.drg 
+coroutine.wrap(KCCE_fake_script)()
+local function BCON_fake_script() -- OpenFrame.drg 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1099,4 +1391,4 @@ local function GXRXB_fake_script() -- OpenFrame.drg
 	end)
 	
 end
-coroutine.wrap(GXRXB_fake_script)()
+coroutine.wrap(BCON_fake_script)()
