@@ -4,19 +4,6 @@
 -- Instances:
 
 local cedit = Instance.new("ScreenGui")
-local OpenFrame = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-local Misc = Instance.new("Frame")
-local Rejoin = Instance.new("TextButton")
-local RejoinInfo = Instance.new("TextLabel")
-local MainFrameBtn = Instance.new("TextButton")
-local TimeTrialBtn = Instance.new("TextButton")
-local TimeTrial = Instance.new("Frame")
-local TimeSetting = Instance.new("TextLabel")
-local CurrentCP = Instance.new("TextLabel")
-local Notif = Instance.new("TextLabel")
-local StartTimeTrialBtn = Instance.new("TextButton")
-local teleKeTimeTrial = Instance.new("TextButton")
 local Open = Instance.new("Frame")
 local usn = Instance.new("TextBox")
 local usn1 = Instance.new("TextLabel")
@@ -36,27 +23,27 @@ local TurboCharger = Instance.new("TextBox")
 local TurboChargerBoost1 = Instance.new("TextLabel")
 local TurboChargerBoost = Instance.new("TextBox")
 local ResetTune = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 local SetTune = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local OtherFrame = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local ConfigFrame = Instance.new("Frame")
 local SaveConfig = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local DeleteConfig = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local TuningFileName = Instance.new("TextBox")
 local LoadConfig = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
 local UIPadding = Instance.new("UIPadding")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local Template = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local Other = Instance.new("Frame")
 local Template_2 = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 local ConfigTune = Instance.new("TextLabel")
 local Pembatas = Instance.new("Folder")
 local PEMBATAS = Instance.new("TextLabel")
@@ -66,173 +53,29 @@ local PEMBATAS_4 = Instance.new("TextLabel")
 local PEMBATAS_5 = Instance.new("TextLabel")
 local PEMBATAS_6 = Instance.new("TextLabel")
 local PEMBATAS_7 = Instance.new("TextLabel")
-local Notif_2 = Instance.new("TextLabel")
+local Notif = Instance.new("TextLabel")
 local usnBtn = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local RND = Instance.new("TextLabel")
+local Misc = Instance.new("Frame")
+local Rejoin = Instance.new("TextButton")
+local RejoinInfo = Instance.new("TextLabel")
+local MainFrameBtn = Instance.new("TextButton")
+local TimeTrialBtn = Instance.new("TextButton")
+local TimeTrial = Instance.new("Frame")
+local TimeSetting = Instance.new("TextLabel")
+local CurrentCP = Instance.new("TextLabel")
+local Notif_2 = Instance.new("TextLabel")
+local StartTimeTrialBtn = Instance.new("TextButton")
+local teleKeTimeTrial = Instance.new("TextButton")
+local OpenFrame = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
 
 --Properties:
 
 cedit.Name = "cedit"
 cedit.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 cedit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-OpenFrame.Name = "OpenFrame"
-OpenFrame.Parent = cedit
-OpenFrame.BackgroundColor3 = Color3.fromRGB(102, 110, 117)
-OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OpenFrame.BorderSizePixel = 0
-OpenFrame.Position = UDim2.new(0.129528984, 0, 0.432735413, 0)
-OpenFrame.Size = UDim2.new(0, 74, 0, 60)
-OpenFrame.Image = "rbxassetid://111851901427385"
-
-UICorner.CornerRadius = UDim.new(2, 0)
-UICorner.Parent = OpenFrame
-
-Misc.Name = "Misc"
-Misc.Parent = cedit
-Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Misc.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Misc.BorderSizePixel = 0
-Misc.Position = UDim2.new(0.210144922, 0, 0.177130044, 0)
-Misc.Size = UDim2.new(0, 214, 0, 296)
-Misc.Visible = false
-
-Rejoin.Name = "Rejoin"
-Rejoin.Parent = Misc
-Rejoin.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-Rejoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Rejoin.BorderSizePixel = 0
-Rejoin.Position = UDim2.new(0.188073397, 0, 0.111486487, 0)
-Rejoin.Size = UDim2.new(0, 136, 0, 34)
-Rejoin.Font = Enum.Font.Arial
-Rejoin.Text = "Rejoin Server"
-Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
-Rejoin.TextScaled = true
-Rejoin.TextSize = 17.000
-Rejoin.TextWrapped = true
-
-RejoinInfo.Name = "RejoinInfo"
-RejoinInfo.Parent = Misc
-RejoinInfo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-RejoinInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RejoinInfo.BorderSizePixel = 0
-RejoinInfo.Position = UDim2.new(0.0412844047, 0, 0.263513505, 0)
-RejoinInfo.Size = UDim2.new(0, 200, 0, 50)
-RejoinInfo.Font = Enum.Font.Arial
-RejoinInfo.Text = "Note: Kalo kamu ngalamin lag, ga bisa masuk mobil, tombol masuk mobil ilang atau ga bisa ganti gigi / gas atau apapun itu atau STUCK, pencet ini aja"
-RejoinInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
-RejoinInfo.TextScaled = true
-RejoinInfo.TextSize = 17.000
-RejoinInfo.TextWrapped = true
-
-MainFrameBtn.Name = "MainFrameBtn"
-MainFrameBtn.Parent = Misc
-MainFrameBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-MainFrameBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MainFrameBtn.BorderSizePixel = 0
-MainFrameBtn.Position = UDim2.new(0.188073397, 0, 0.847972989, 0)
-MainFrameBtn.Size = UDim2.new(0, 136, 0, 29)
-MainFrameBtn.Font = Enum.Font.Arial
-MainFrameBtn.Text = "Back"
-MainFrameBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-MainFrameBtn.TextSize = 20.000
-MainFrameBtn.TextWrapped = true
-
-TimeTrialBtn.Name = "TimeTrialBtn"
-TimeTrialBtn.Parent = Misc
-TimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-TimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TimeTrialBtn.BorderSizePixel = 0
-TimeTrialBtn.Position = UDim2.new(0.188073412, 0, 0.679054081, 0)
-TimeTrialBtn.Size = UDim2.new(0, 136, 0, 34)
-TimeTrialBtn.Font = Enum.Font.Arial
-TimeTrialBtn.Text = "Time Trial"
-TimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-TimeTrialBtn.TextScaled = true
-TimeTrialBtn.TextSize = 17.000
-TimeTrialBtn.TextWrapped = true
-
-TimeTrial.Name = "TimeTrial"
-TimeTrial.Parent = Misc
-TimeTrial.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TimeTrial.BorderSizePixel = 0
-TimeTrial.Position = UDim2.new(1.02803743, 0, 0, 0)
-TimeTrial.Size = UDim2.new(0, 174, 0, 260)
-
-TimeSetting.Name = "TimeSetting"
-TimeSetting.Parent = TimeTrial
-TimeSetting.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TimeSetting.BackgroundTransparency = 1.000
-TimeSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TimeSetting.BorderSizePixel = 0
-TimeSetting.Position = UDim2.new(0.132183909, 0, 0, 0)
-TimeSetting.Size = UDim2.new(0, 128, 0, 50)
-TimeSetting.Font = Enum.Font.Arial
-TimeSetting.Text = "Settingan Waktu : 60.2 (Tidak bisa di ganti)"
-TimeSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
-TimeSetting.TextScaled = true
-TimeSetting.TextSize = 17.000
-TimeSetting.TextWrapped = true
-
-CurrentCP.Name = "CurrentCP"
-CurrentCP.Parent = TimeTrial
-CurrentCP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CurrentCP.BackgroundTransparency = 1.000
-CurrentCP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CurrentCP.BorderSizePixel = 0
-CurrentCP.Position = UDim2.new(0.126436785, 0, 0.21604538, 0)
-CurrentCP.Size = UDim2.new(0, 128, 0, 50)
-CurrentCP.Visible = false
-CurrentCP.Font = Enum.Font.Arial
-CurrentCP.Text = "CP : 0"
-CurrentCP.TextColor3 = Color3.fromRGB(255, 255, 255)
-CurrentCP.TextSize = 17.000
-CurrentCP.TextWrapped = true
-
-Notif.Name = "Notif"
-Notif.Parent = TimeTrial
-Notif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Notif.BackgroundTransparency = 1.000
-Notif.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Notif.BorderSizePixel = 0
-Notif.Position = UDim2.new(0, 0, 0.705081642, 0)
-Notif.Size = UDim2.new(0, 174, 0, 76)
-Notif.Font = Enum.Font.Arial
-Notif.Text = ""
-Notif.TextColor3 = Color3.fromRGB(255, 255, 255)
-Notif.TextScaled = true
-Notif.TextSize = 17.000
-Notif.TextWrapped = true
-
-StartTimeTrialBtn.Name = "StartTimeTrialBtn"
-StartTimeTrialBtn.Parent = TimeTrial
-StartTimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-StartTimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-StartTimeTrialBtn.BorderSizePixel = 0
-StartTimeTrialBtn.Position = UDim2.new(0.1076134, 0, 0.435375988, 0)
-StartTimeTrialBtn.Size = UDim2.new(0, 136, 0, 24)
-StartTimeTrialBtn.Font = Enum.Font.Arial
-StartTimeTrialBtn.Text = "Start Time Trial (Sentul)"
-StartTimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-StartTimeTrialBtn.TextScaled = true
-StartTimeTrialBtn.TextSize = 17.000
-StartTimeTrialBtn.TextWrapped = true
-
-teleKeTimeTrial.Name = "teleKeTimeTrial"
-teleKeTimeTrial.Parent = TimeTrial
-teleKeTimeTrial.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-teleKeTimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
-teleKeTimeTrial.BorderSizePixel = 0
-teleKeTimeTrial.Position = UDim2.new(0.1076134, 0, 0.554606736, 0)
-teleKeTimeTrial.Size = UDim2.new(0, 136, 0, 29)
-teleKeTimeTrial.Font = Enum.Font.Arial
-teleKeTimeTrial.Text = "Teleport ke Time Trial Sentul"
-teleKeTimeTrial.TextColor3 = Color3.fromRGB(255, 255, 255)
-teleKeTimeTrial.TextScaled = true
-teleKeTimeTrial.TextSize = 17.000
-teleKeTimeTrial.TextWrapped = true
 
 Open.Name = "Open"
 Open.Parent = cedit
@@ -467,7 +310,7 @@ ResetTune.TextScaled = true
 ResetTune.TextSize = 17.000
 ResetTune.TextWrapped = true
 
-UICorner_2.Parent = ResetTune
+UICorner.Parent = ResetTune
 
 SetTune.Name = "SetTune"
 SetTune.Parent = TunnerFrame
@@ -483,7 +326,7 @@ SetTune.TextScaled = true
 SetTune.TextSize = 17.000
 SetTune.TextWrapped = true
 
-UICorner_3.Parent = SetTune
+UICorner_2.Parent = SetTune
 
 OtherFrame.Name = "OtherFrame"
 OtherFrame.Parent = TunnerFrame
@@ -499,7 +342,7 @@ OtherFrame.TextScaled = true
 OtherFrame.TextSize = 17.000
 OtherFrame.TextWrapped = true
 
-UICorner_4.Parent = OtherFrame
+UICorner_3.Parent = OtherFrame
 
 ConfigFrame.Name = "ConfigFrame"
 ConfigFrame.Parent = Tuning
@@ -523,7 +366,7 @@ SaveConfig.TextScaled = true
 SaveConfig.TextSize = 17.000
 SaveConfig.TextWrapped = true
 
-UICorner_5.Parent = SaveConfig
+UICorner_4.Parent = SaveConfig
 
 DeleteConfig.Name = "DeleteConfig"
 DeleteConfig.Parent = ConfigFrame
@@ -539,7 +382,7 @@ DeleteConfig.TextScaled = true
 DeleteConfig.TextSize = 17.000
 DeleteConfig.TextWrapped = true
 
-UICorner_6.Parent = DeleteConfig
+UICorner_5.Parent = DeleteConfig
 
 TuningFileName.Name = "TuningFileName"
 TuningFileName.Parent = ConfigFrame
@@ -589,7 +432,7 @@ Template.TextScaled = true
 Template.TextSize = 17.000
 Template.TextWrapped = true
 
-UICorner_7.Parent = Template
+UICorner_6.Parent = Template
 
 UIListLayout_2.Parent = ScrollingFrame
 UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
@@ -617,7 +460,7 @@ Template_2.TextScaled = true
 Template_2.TextSize = 17.000
 Template_2.TextWrapped = true
 
-UICorner_8.Parent = Template_2
+UICorner_7.Parent = Template_2
 
 ConfigTune.Name = "Config Tune"
 ConfigTune.Parent = Other
@@ -719,21 +562,21 @@ PEMBATAS_7.Text = ""
 PEMBATAS_7.TextColor3 = Color3.fromRGB(0, 0, 0)
 PEMBATAS_7.TextSize = 14.000
 
-Notif_2.Name = "Notif"
-Notif_2.Parent = Open
-Notif_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Notif_2.BackgroundTransparency = 1.000
-Notif_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Notif_2.BorderSizePixel = 0
-Notif_2.Position = UDim2.new(0.748387098, 0, 0.224637687, 0)
-Notif_2.Size = UDim2.new(0, 136, 0, 50)
-Notif_2.Visible = false
-Notif_2.Font = Enum.Font.Arial
-Notif_2.Text = ""
-Notif_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Notif_2.TextScaled = true
-Notif_2.TextSize = 17.000
-Notif_2.TextWrapped = true
+Notif.Name = "Notif"
+Notif.Parent = Open
+Notif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notif.BackgroundTransparency = 1.000
+Notif.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notif.BorderSizePixel = 0
+Notif.Position = UDim2.new(0.748387098, 0, 0.224637687, 0)
+Notif.Size = UDim2.new(0, 136, 0, 50)
+Notif.Visible = false
+Notif.Font = Enum.Font.Arial
+Notif.Text = ""
+Notif.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notif.TextScaled = true
+Notif.TextSize = 17.000
+Notif.TextWrapped = true
 
 usnBtn.Name = "usnBtn"
 usnBtn.Parent = Open
@@ -747,7 +590,7 @@ usnBtn.Text = "☑ LocalName"
 usnBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 usnBtn.TextSize = 17.000
 
-UICorner_9.Parent = usnBtn
+UICorner_8.Parent = usnBtn
 
 RND.Name = "RND"
 RND.Parent = Open
@@ -762,113 +605,166 @@ RND.Text = "File Name"
 RND.TextColor3 = Color3.fromRGB(255, 255, 255)
 RND.TextSize = 17.000
 
+Misc.Name = "Misc"
+Misc.Parent = cedit
+Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Misc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(0.210144922, 0, 0.177130044, 0)
+Misc.Size = UDim2.new(0, 214, 0, 296)
+Misc.Visible = false
+
+Rejoin.Name = "Rejoin"
+Rejoin.Parent = Misc
+Rejoin.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Rejoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rejoin.BorderSizePixel = 0
+Rejoin.Position = UDim2.new(0.188073397, 0, 0.111486487, 0)
+Rejoin.Size = UDim2.new(0, 136, 0, 34)
+Rejoin.Font = Enum.Font.Arial
+Rejoin.Text = "Rejoin Server"
+Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
+Rejoin.TextScaled = true
+Rejoin.TextSize = 17.000
+Rejoin.TextWrapped = true
+
+RejoinInfo.Name = "RejoinInfo"
+RejoinInfo.Parent = Misc
+RejoinInfo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RejoinInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RejoinInfo.BorderSizePixel = 0
+RejoinInfo.Position = UDim2.new(0.0412844047, 0, 0.263513505, 0)
+RejoinInfo.Size = UDim2.new(0, 200, 0, 50)
+RejoinInfo.Font = Enum.Font.Arial
+RejoinInfo.Text = "Note: Kalo kamu ngalamin lag, ga bisa masuk mobil, tombol masuk mobil ilang atau ga bisa ganti gigi / gas atau apapun itu atau STUCK, pencet ini aja"
+RejoinInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+RejoinInfo.TextScaled = true
+RejoinInfo.TextSize = 17.000
+RejoinInfo.TextWrapped = true
+
+MainFrameBtn.Name = "MainFrameBtn"
+MainFrameBtn.Parent = Misc
+MainFrameBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+MainFrameBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrameBtn.BorderSizePixel = 0
+MainFrameBtn.Position = UDim2.new(0.188073397, 0, 0.847972989, 0)
+MainFrameBtn.Size = UDim2.new(0, 136, 0, 29)
+MainFrameBtn.Font = Enum.Font.Arial
+MainFrameBtn.Text = "Back"
+MainFrameBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainFrameBtn.TextSize = 20.000
+MainFrameBtn.TextWrapped = true
+
+TimeTrialBtn.Name = "TimeTrialBtn"
+TimeTrialBtn.Parent = Misc
+TimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+TimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimeTrialBtn.BorderSizePixel = 0
+TimeTrialBtn.Position = UDim2.new(0.188073412, 0, 0.679054081, 0)
+TimeTrialBtn.Size = UDim2.new(0, 136, 0, 34)
+TimeTrialBtn.Font = Enum.Font.Arial
+TimeTrialBtn.Text = "Time Trial"
+TimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimeTrialBtn.TextScaled = true
+TimeTrialBtn.TextSize = 17.000
+TimeTrialBtn.TextWrapped = true
+
+TimeTrial.Name = "TimeTrial"
+TimeTrial.Parent = Misc
+TimeTrial.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimeTrial.BorderSizePixel = 0
+TimeTrial.Position = UDim2.new(1.02803743, 0, 0, 0)
+TimeTrial.Size = UDim2.new(0, 174, 0, 260)
+
+TimeSetting.Name = "TimeSetting"
+TimeSetting.Parent = TimeTrial
+TimeSetting.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TimeSetting.BackgroundTransparency = 1.000
+TimeSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimeSetting.BorderSizePixel = 0
+TimeSetting.Position = UDim2.new(0.132183909, 0, 0, 0)
+TimeSetting.Size = UDim2.new(0, 128, 0, 50)
+TimeSetting.Font = Enum.Font.Arial
+TimeSetting.Text = "Settingan Waktu : 60.2 (Tidak bisa di ganti)"
+TimeSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimeSetting.TextScaled = true
+TimeSetting.TextSize = 17.000
+TimeSetting.TextWrapped = true
+
+CurrentCP.Name = "CurrentCP"
+CurrentCP.Parent = TimeTrial
+CurrentCP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CurrentCP.BackgroundTransparency = 1.000
+CurrentCP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CurrentCP.BorderSizePixel = 0
+CurrentCP.Position = UDim2.new(0.126436785, 0, 0.21604538, 0)
+CurrentCP.Size = UDim2.new(0, 128, 0, 50)
+CurrentCP.Visible = false
+CurrentCP.Font = Enum.Font.Arial
+CurrentCP.Text = "CP : 0"
+CurrentCP.TextColor3 = Color3.fromRGB(255, 255, 255)
+CurrentCP.TextSize = 17.000
+CurrentCP.TextWrapped = true
+
+Notif_2.Name = "Notif"
+Notif_2.Parent = TimeTrial
+Notif_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notif_2.BackgroundTransparency = 1.000
+Notif_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notif_2.BorderSizePixel = 0
+Notif_2.Position = UDim2.new(0, 0, 0.705081642, 0)
+Notif_2.Size = UDim2.new(0, 174, 0, 76)
+Notif_2.Font = Enum.Font.Arial
+Notif_2.Text = ""
+Notif_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notif_2.TextScaled = true
+Notif_2.TextSize = 17.000
+Notif_2.TextWrapped = true
+
+StartTimeTrialBtn.Name = "StartTimeTrialBtn"
+StartTimeTrialBtn.Parent = TimeTrial
+StartTimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+StartTimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartTimeTrialBtn.BorderSizePixel = 0
+StartTimeTrialBtn.Position = UDim2.new(0.1076134, 0, 0.435375988, 0)
+StartTimeTrialBtn.Size = UDim2.new(0, 136, 0, 24)
+StartTimeTrialBtn.Font = Enum.Font.Arial
+StartTimeTrialBtn.Text = "Start Time Trial (Sentul)"
+StartTimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartTimeTrialBtn.TextScaled = true
+StartTimeTrialBtn.TextSize = 17.000
+StartTimeTrialBtn.TextWrapped = true
+
+teleKeTimeTrial.Name = "teleKeTimeTrial"
+teleKeTimeTrial.Parent = TimeTrial
+teleKeTimeTrial.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+teleKeTimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teleKeTimeTrial.BorderSizePixel = 0
+teleKeTimeTrial.Position = UDim2.new(0.1076134, 0, 0.554606736, 0)
+teleKeTimeTrial.Size = UDim2.new(0, 136, 0, 29)
+teleKeTimeTrial.Font = Enum.Font.Arial
+teleKeTimeTrial.Text = "Teleport ke Time Trial Sentul"
+teleKeTimeTrial.TextColor3 = Color3.fromRGB(255, 255, 255)
+teleKeTimeTrial.TextScaled = true
+teleKeTimeTrial.TextSize = 17.000
+teleKeTimeTrial.TextWrapped = true
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = cedit
+OpenFrame.BackgroundColor3 = Color3.fromRGB(102, 110, 117)
+OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.BorderSizePixel = 0
+OpenFrame.Position = UDim2.new(0.129528984, 0, 0.432735413, 0)
+OpenFrame.Size = UDim2.new(0, 74, 0, 60)
+OpenFrame.Image = "rbxassetid://111851901427385"
+
+UICorner_9.CornerRadius = UDim.new(2, 0)
+UICorner_9.Parent = OpenFrame
+
 -- Scripts:
 
-local function AQUYR_fake_script() -- OpenFrame.callframe 
-	local script = Instance.new('LocalScript', OpenFrame)
-
-	local button = script.Parent
-	local frame = button.Parent:WaitForChild("Open")
-	
-	button.MouseButton1Click:Connect(function()
-		if frame.Visible == false then
-			frame.Visible = true
-		else
-			frame.Visible = false
-		end
-	end)
-end
-coroutine.wrap(AQUYR_fake_script)()
-local function RXHGSUR_fake_script() -- OpenFrame.drg 
-	local script = Instance.new('LocalScript', OpenFrame)
-
-	local button = script.Parent
-	local UserInputService = game:GetService("UserInputService")
-	
-	local dragging = false
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		button.Position = UDim2.new(
-			startPos.X.Scale,
-			startPos.X.Offset + delta.X,
-			startPos.Y.Scale,
-			startPos.Y.Offset + delta.Y
-		)
-	end
-	
-	button.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-			dragStart = input.Position
-			startPos = button.Position
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	button.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement then
-			if dragging then
-				update(input)
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(RXHGSUR_fake_script)()
-local function JAVD_fake_script() -- Misc.drg 
-	local script = Instance.new('LocalScript', Misc)
-
-	local mainFrame = script.Parent
-	local UserInputService = game:GetService("UserInputService")
-	local dragging = false
-	local dragStart
-	local startPos
-	local function update(input)
-		local delta = input.Position - dragStart
-		mainFrame.Position = UDim2.new(
-			startPos.X.Scale,
-			startPos.X.Offset + delta.X,
-			startPos.Y.Scale,
-			startPos.Y.Offset + delta.Y
-		)
-	end
-	local function enableDrag(guiObject)
-		guiObject.InputBegan:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 then
-				dragging = true
-				dragStart = input.Position
-				startPos = mainFrame.Position
-	
-				input.Changed:Connect(function()
-					if input.UserInputState == Enum.UserInputState.End then
-						dragging = false
-					end
-				end)
-			end
-		end)
-		guiObject.InputChanged:Connect(function(input)
-			if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-				update(input)
-			end
-		end)
-	end
-	for _, obj in ipairs(mainFrame:GetDescendants()) do
-		if obj:IsA("GuiObject") then
-			enableDrag(obj)
-		end
-	end
-	enableDrag(mainFrame)
-end
-coroutine.wrap(JAVD_fake_script)()
-local function RXFDEQ_fake_script() -- Open.handler 
+local function JDEDNWI_fake_script() -- Open.handler 
 	local script = Instance.new('LocalScript', Open)
 
 	local Username_TBName1 = ""
@@ -1483,156 +1379,8 @@ local function RXFDEQ_fake_script() -- Open.handler
 		end
 	end)
 end
-coroutine.wrap(RXFDEQ_fake_script)()
-local function KGDADX_fake_script() -- usn.usner 
-	local script = Instance.new('LocalScript', usn)
-
-	local label = script.Parent
-	local player = game.Players.LocalPlayer
-	label.Text = player.Name
-end
-coroutine.wrap(KGDADX_fake_script)()
-local function ANRNJJY_fake_script() -- Tuning.PembatasFrame 
-	local script = Instance.new('LocalScript', Tuning)
-
-	local RunService = game:GetService("RunService")
-	local folder = script.Parent:WaitForChild("Pembatas")
-	
-	local pembatas = {}
-	for _, obj in ipairs(folder:GetChildren()) do
-		if (obj:IsA("Frame") or obj:IsA("TextLabel") or obj:IsA("TextButton")) and obj.Name == "PEMBATAS" then
-			table.insert(pembatas, obj)
-		end
-	end
-	
-	local hue = 0
-	
-	RunService.RenderStepped:Connect(function()
-		hue = (hue + 0.003) % 1
-		local color = Color3.fromHSV(hue, 1, 1)
-		for _, item in ipairs(pembatas) do
-			item.BackgroundColor3 = color
-		end
-	end)
-	
-end
-coroutine.wrap(ANRNJJY_fake_script)()
-local function GAANKMY_fake_script() -- Brake.number 
-	local script = Instance.new('LocalScript', Brake)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(GAANKMY_fake_script)()
-local function PWCLX_fake_script() -- HP.number 
-	local script = Instance.new('LocalScript', HP)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(PWCLX_fake_script)()
-local function UAROLHM_fake_script() -- SuperCharger.number 
-	local script = Instance.new('LocalScript', SuperCharger)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(UAROLHM_fake_script)()
-local function SYVTA_fake_script() -- SuperChargerBoost.number 
-	local script = Instance.new('LocalScript', SuperChargerBoost)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(SYVTA_fake_script)()
-local function QAJMYG_fake_script() -- TurboCharger.number 
-	local script = Instance.new('LocalScript', TurboCharger)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(QAJMYG_fake_script)()
-local function JVXJBDY_fake_script() -- TurboChargerBoost.number 
-	local script = Instance.new('LocalScript', TurboChargerBoost)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(JVXJBDY_fake_script)()
-local function GKANZD_fake_script() -- usnBtn.usnBtnHandler 
-	local script = Instance.new('LocalScript', usnBtn)
-
-	local button = script.Parent
-	local usnLabel = script.Parent.Parent:WaitForChild("usn")
-	
-	local label = script.Parent
-	local player = game.Players.LocalPlayer
-	
-	button.MouseButton1Click:Connect(function()
-		if button.Text == "□ LocalName" then
-			if usnLabel.Text ~= player.Name then
-				usnLabel.Text = player.Name
-			end
-			button.Text = "☑ LocalName"
-			usnLabel.TextEditable = false
-			usnLabel.ClearTextOnFocus = false
-		elseif button.Text == "☑ LocalName" then
-			button.Text = "□ LocalName"
-			usnLabel.TextEditable = true
-			usnLabel.ClearTextOnFocus = true
-		end
-	end)
-end
-coroutine.wrap(GKANZD_fake_script)()
-local function XWUCTM_fake_script() -- Open.drg 
+coroutine.wrap(JDEDNWI_fake_script)()
+local function MIQIV_fake_script() -- Open.drg 
 	local script = Instance.new('LocalScript', Open)
 
 	local mainFrame = script.Parent
@@ -1676,4 +1424,260 @@ local function XWUCTM_fake_script() -- Open.drg
 	end
 	enableDrag(mainFrame)
 end
-coroutine.wrap(XWUCTM_fake_script)()
+coroutine.wrap(MIQIV_fake_script)()
+local function BMYPYVR_fake_script() -- usn.usner 
+	local script = Instance.new('LocalScript', usn)
+
+	local label = script.Parent
+	local player = game.Players.LocalPlayer
+	label.Text = player.Name
+end
+coroutine.wrap(BMYPYVR_fake_script)()
+local function NUZXGPI_fake_script() -- Tuning.PembatasFrame 
+	local script = Instance.new('LocalScript', Tuning)
+
+	local RunService = game:GetService("RunService")
+	local folder = script.Parent:WaitForChild("Pembatas")
+	
+	local pembatas = {}
+	for _, obj in ipairs(folder:GetChildren()) do
+		if (obj:IsA("Frame") or obj:IsA("TextLabel") or obj:IsA("TextButton")) and obj.Name == "PEMBATAS" then
+			table.insert(pembatas, obj)
+		end
+	end
+	
+	local hue = 0
+	
+	RunService.RenderStepped:Connect(function()
+		hue = (hue + 0.003) % 1
+		local color = Color3.fromHSV(hue, 1, 1)
+		for _, item in ipairs(pembatas) do
+			item.BackgroundColor3 = color
+		end
+	end)
+	
+end
+coroutine.wrap(NUZXGPI_fake_script)()
+local function CBSOQO_fake_script() -- Brake.number 
+	local script = Instance.new('LocalScript', Brake)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(CBSOQO_fake_script)()
+local function UFSZCCW_fake_script() -- HP.number 
+	local script = Instance.new('LocalScript', HP)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(UFSZCCW_fake_script)()
+local function VKYHKBT_fake_script() -- SuperCharger.number 
+	local script = Instance.new('LocalScript', SuperCharger)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(VKYHKBT_fake_script)()
+local function ZNIBREN_fake_script() -- SuperChargerBoost.number 
+	local script = Instance.new('LocalScript', SuperChargerBoost)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(ZNIBREN_fake_script)()
+local function CPVEPKB_fake_script() -- TurboCharger.number 
+	local script = Instance.new('LocalScript', TurboCharger)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(CPVEPKB_fake_script)()
+local function ORCMS_fake_script() -- TurboChargerBoost.number 
+	local script = Instance.new('LocalScript', TurboChargerBoost)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(ORCMS_fake_script)()
+local function VIYYEL_fake_script() -- usnBtn.usnBtnHandler 
+	local script = Instance.new('LocalScript', usnBtn)
+
+	local button = script.Parent
+	local usnLabel = script.Parent.Parent:WaitForChild("usn")
+	
+	local label = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if button.Text == "□ LocalName" then
+			if usnLabel.Text ~= player.Name then
+				usnLabel.Text = player.Name
+			end
+			button.Text = "☑ LocalName"
+			usnLabel.TextEditable = false
+			usnLabel.ClearTextOnFocus = false
+		elseif button.Text == "☑ LocalName" then
+			button.Text = "□ LocalName"
+			usnLabel.TextEditable = true
+			usnLabel.ClearTextOnFocus = true
+		end
+	end)
+end
+coroutine.wrap(VIYYEL_fake_script)()
+local function MPUPCQ_fake_script() -- Misc.drg 
+	local script = Instance.new('LocalScript', Misc)
+
+	local mainFrame = script.Parent
+	local UserInputService = game:GetService("UserInputService")
+	local dragging = false
+	local dragStart
+	local startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		mainFrame.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	local function enableDrag(guiObject)
+		guiObject.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				dragging = true
+				dragStart = input.Position
+				startPos = mainFrame.Position
+	
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		guiObject.InputChanged:Connect(function(input)
+			if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+				update(input)
+			end
+		end)
+	end
+	for _, obj in ipairs(mainFrame:GetDescendants()) do
+		if obj:IsA("GuiObject") then
+			enableDrag(obj)
+		end
+	end
+	enableDrag(mainFrame)
+end
+coroutine.wrap(MPUPCQ_fake_script)()
+local function GONSP_fake_script() -- OpenFrame.callframe 
+	local script = Instance.new('LocalScript', OpenFrame)
+
+	local button = script.Parent
+	local frame = button.Parent:WaitForChild("Open")
+	local misc = button.Parent:WaitForChild("Misc")
+	
+	button.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			if misc.Visible == true then
+				misc.Visible = false
+			end
+			frame.Visible = true
+		else
+			frame.Visible = false
+		end
+	end)
+end
+coroutine.wrap(GONSP_fake_script)()
+local function MXMB_fake_script() -- OpenFrame.drg 
+	local script = Instance.new('LocalScript', OpenFrame)
+
+	local button = script.Parent
+	local UserInputService = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		button.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	button.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = button.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	button.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			if dragging then
+				update(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(MXMB_fake_script)()
