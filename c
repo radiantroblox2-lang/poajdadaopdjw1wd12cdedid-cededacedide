@@ -63,6 +63,13 @@ local Misc = Instance.new("Frame")
 local Rejoin = Instance.new("TextButton")
 local RejoinInfo = Instance.new("TextLabel")
 local MainFrameBtn = Instance.new("TextButton")
+local TimeTrialBtn = Instance.new("TextButton")
+local TimeTrial = Instance.new("Frame")
+local TimeSetting = Instance.new("TextLabel")
+local CurrentCP = Instance.new("TextLabel")
+local Notif_2 = Instance.new("TextLabel")
+local StartTimeTrialBtn = Instance.new("TextButton")
+local teleKeTimeTrial = Instance.new("TextButton")
 
 --Properties:
 
@@ -616,7 +623,7 @@ Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Misc.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Misc.BorderSizePixel = 0
 Misc.Position = UDim2.new(0.210144922, 0, 0.177130044, 0)
-Misc.Size = UDim2.new(0, 218, 0, 296)
+Misc.Size = UDim2.new(0, 214, 0, 296)
 Misc.Visible = false
 
 Rejoin.Name = "Rejoin"
@@ -660,9 +667,105 @@ MainFrameBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 MainFrameBtn.TextSize = 20.000
 MainFrameBtn.TextWrapped = true
 
+TimeTrialBtn.Name = "TimeTrialBtn"
+TimeTrialBtn.Parent = Misc
+TimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+TimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimeTrialBtn.BorderSizePixel = 0
+TimeTrialBtn.Position = UDim2.new(0.188073412, 0, 0.679054081, 0)
+TimeTrialBtn.Size = UDim2.new(0, 136, 0, 34)
+TimeTrialBtn.Font = Enum.Font.Arial
+TimeTrialBtn.Text = "Time Trial"
+TimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimeTrialBtn.TextScaled = true
+TimeTrialBtn.TextSize = 17.000
+TimeTrialBtn.TextWrapped = true
+
+TimeTrial.Name = "TimeTrial"
+TimeTrial.Parent = Misc
+TimeTrial.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimeTrial.BorderSizePixel = 0
+TimeTrial.Position = UDim2.new(1.02803743, 0, 0, 0)
+TimeTrial.Size = UDim2.new(0, 174, 0, 260)
+TimeTrial.Visible = false
+
+TimeSetting.Name = "TimeSetting"
+TimeSetting.Parent = TimeTrial
+TimeSetting.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TimeSetting.BackgroundTransparency = 1.000
+TimeSetting.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimeSetting.BorderSizePixel = 0
+TimeSetting.Position = UDim2.new(0.132183909, 0, 0, 0)
+TimeSetting.Size = UDim2.new(0, 128, 0, 50)
+TimeSetting.Font = Enum.Font.Arial
+TimeSetting.Text = "Settingan Waktu : 60.2 (Tidak bisa di ganti)"
+TimeSetting.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimeSetting.TextScaled = true
+TimeSetting.TextSize = 17.000
+TimeSetting.TextWrapped = true
+
+CurrentCP.Name = "CurrentCP"
+CurrentCP.Parent = TimeTrial
+CurrentCP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CurrentCP.BackgroundTransparency = 1.000
+CurrentCP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CurrentCP.BorderSizePixel = 0
+CurrentCP.Position = UDim2.new(0.126436785, 0, 0.21604538, 0)
+CurrentCP.Size = UDim2.new(0, 128, 0, 50)
+CurrentCP.Visible = false
+CurrentCP.Font = Enum.Font.Arial
+CurrentCP.Text = "CP : 0"
+CurrentCP.TextColor3 = Color3.fromRGB(255, 255, 255)
+CurrentCP.TextSize = 17.000
+CurrentCP.TextWrapped = true
+
+Notif_2.Name = "Notif"
+Notif_2.Parent = TimeTrial
+Notif_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notif_2.BackgroundTransparency = 1.000
+Notif_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notif_2.BorderSizePixel = 0
+Notif_2.Position = UDim2.new(0, 0, 0.705081642, 0)
+Notif_2.Size = UDim2.new(0, 174, 0, 76)
+Notif_2.Font = Enum.Font.Arial
+Notif_2.Text = ""
+Notif_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notif_2.TextScaled = true
+Notif_2.TextSize = 17.000
+Notif_2.TextWrapped = true
+
+StartTimeTrialBtn.Name = "StartTimeTrialBtn"
+StartTimeTrialBtn.Parent = TimeTrial
+StartTimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+StartTimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartTimeTrialBtn.BorderSizePixel = 0
+StartTimeTrialBtn.Position = UDim2.new(0.1076134, 0, 0.435375988, 0)
+StartTimeTrialBtn.Size = UDim2.new(0, 136, 0, 24)
+StartTimeTrialBtn.Font = Enum.Font.Arial
+StartTimeTrialBtn.Text = "Start Time Trial (Sentul)"
+StartTimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartTimeTrialBtn.TextScaled = true
+StartTimeTrialBtn.TextSize = 17.000
+StartTimeTrialBtn.TextWrapped = true
+
+teleKeTimeTrial.Name = "teleKeTimeTrial"
+teleKeTimeTrial.Parent = TimeTrial
+teleKeTimeTrial.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+teleKeTimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teleKeTimeTrial.BorderSizePixel = 0
+teleKeTimeTrial.Position = UDim2.new(0.1076134, 0, 0.554606736, 0)
+teleKeTimeTrial.Size = UDim2.new(0, 136, 0, 29)
+teleKeTimeTrial.Font = Enum.Font.Arial
+teleKeTimeTrial.Text = "Teleport ke Time Trial Sentul"
+teleKeTimeTrial.TextColor3 = Color3.fromRGB(255, 255, 255)
+teleKeTimeTrial.TextScaled = true
+teleKeTimeTrial.TextSize = 17.000
+teleKeTimeTrial.TextWrapped = true
+
 -- Scripts:
 
-local function BENJH_fake_script() -- Open.drg 
+local function TOTDZQ_fake_script() -- Open.drg 
 	local script = Instance.new('LocalScript', Open)
 
 	local frame = script.Parent
@@ -705,8 +808,8 @@ local function BENJH_fake_script() -- Open.drg
 	end)
 	
 end
-coroutine.wrap(BENJH_fake_script)()
-local function FBESZC_fake_script() -- Open.handler 
+coroutine.wrap(TOTDZQ_fake_script)()
+local function EZDCJ_fake_script() -- Open.handler 
 	local script = Instance.new('LocalScript', Open)
 
 	local Username_TBName1 = ""
@@ -767,6 +870,9 @@ local function FBESZC_fake_script() -- Open.handler
 	
 	local RejoinBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("Rejoin")
 	local MainFrameBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("MainFrameBtn")
+	local TimeTrialBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrialBtn")
+	local StartTimeTrialBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial"):WaitForChild("StartTimeTrialBtn")
+	local TeleTimeTrialBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial"):WaitForChild("teleKeTimeTrial")
 	
 	local username_s1 = ""
 	local brake_s1 = 0
@@ -1160,6 +1266,140 @@ local function FBESZC_fake_script() -- Open.handler
 		end
 	end)
 	
+	TimeTrialBtn.MouseButton1Click:Connect(function()
+		local TimeTrialFrame = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial")
+		if TimeTrialFrame.Visible == true then
+			TimeTrialFrame.Visible = false
+		else
+			TimeTrialFrame.Visible = true
+		end
+	end)
+	
+	TeleTimeTrialBtn.MouseButton1Click:Connect(function()
+		local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+		rootPart.CFrame = CFrame.new(-13887.5146, -39.2708969, 8899.52441, 0.806803703, -0, -0.590819538, 0, 1, -0, 0.590819538, 0, 0.806803703)
+	end)
+	
+	StartTimeTrialBtn.MouseButton1Click:Connect(function()
+		local Notifier = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial"):WaitForChild("Notif")
+		local cp_info = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial"):WaitForChild("CurrentCP")
+		
+		local function cp_infer121023 (Status, text)
+			if Status == "Hold" then
+				StartTimeTrialBtn.Visible = false
+				TeleTimeTrialBtn.Visible = false
+				cp_info.Visible = true
+				cp_info.Text = text
+			elseif Status == "UnHold" then
+				cp_info.Text = text
+				task.wait(5.01)
+				StartTimeTrialBtn.Visible = true
+				TeleTimeTrialBtn.Visible = true
+				cp_info.Visible = false
+				cp_info.Text = ""
+			end
+		end
+		
+		local function NOtif192047124 (Status, Text)
+			if Status == "Warn" then
+				Notifier.BackgroundColor = Color3.fromRGB(255, 255, 0)
+				Notifier.BackgroundTransparency = 0
+				Notifier.Text = Text
+				task.wait(5.01)
+				Notifier.BackgroundColor = Color3.fromRGB(255, 255, 255)
+				Notifier.BackgroundTransparency = 1
+				Notifier.Text = ""
+			elseif Status == "Info" then
+				Notifier.Text = Text
+				task.wait(5.01)
+				Notifier.Text = ""
+			elseif Status == "Err" then
+				Notifier.BackgroundColor = Color3.fromRGB(255, 0, 0)
+				Notifier.BackgroundTransparency = 0
+				Notifier.Text = Text
+				task.wait(5.01)
+				Notifier.BackgroundColor = Color3.fromRGB(255, 255, 255)
+				Notifier.BackgroundTransparency = 1
+				Notifier.Text = ""
+			end
+		end
+		local timetrial_Start = false
+		local Players = game:GetService("Players")
+		local player = game.Players.LocalPlayer
+	
+		local TOTAL_CP = 21
+		local TOTAL_TIME = 61.7
+		local delayPerCP = TOTAL_TIME / TOTAL_CP
+	
+		local CheckpointFolder = workspace:WaitForChild("Etc"):WaitForChild("Race"):WaitForChild("Checkpoint")
+		local CarsFolder = workspace:WaitForChild("Vehicles")
+	
+		local function teleportSequence()
+			local car = CarsFolder:FindFirstChild(player.Name .. "sCar")
+			if not car then
+				NOtif192047124("Err", "Mobil player tidak ditemukan:", player.Name .. "sCar")
+				return
+			end
+	
+			if not car.PrimaryPart then
+				NOtif192047124("Warn", "failed 221, please report Script Owner")
+				warn("failed 221, please report Script Owner")
+				return
+			end
+			timetrial_Start = true
+			for i = 1, TOTAL_CP do
+				local model = CheckpointFolder:FindFirstChild(tostring(i))
+				if model then
+					local tpFolder = model:FindFirstChild("1")
+					if tpFolder then
+						local tp = tpFolder:FindFirstChild("Part")
+						if tp then
+							car:SetPrimaryPartCFrame(tp.CFrame)
+							cp_infer121023("Hold", "CP : "..i)
+							print("tp mobil ke ", i)
+						else
+							warn("ga ada part model ", i)
+						end
+					else
+						warn("ga ada part 1 di model ", i)
+						print(model.Name)
+						cp_infer121023("Hold", "CP : "..i)
+						if i == 7 then
+							car:SetPrimaryPartCFrame(CFrame.new(-12508.3662, -19.9316063, 13079.5107, -0.943835497, -0.00569843082, -0.330366373, -0.00604555057, 0.999981701, 2.3245113e-05, 0.330360174, 0.00201918627, -0.943852663))
+							print("[FORCE TP] mobil tp ke cp ", i)
+						elseif i == 8 then
+							car:SetPrimaryPartCFrame(CFrame.new(-12355.1621, -14.408474, 13680.2275, -0.922647119, -0.00551762059, 0.38560617, -0.00599290617, 0.999982059, -3.0641444e-05, -0.385599077, -0.00233917264, -0.922663689))
+							print("[FORCE TP] mobil tp ke cp ", i)
+						elseif i == 10 then
+							car:SetPrimaryPartCFrame(CFrame.new(-13094.7148, -14.5008202, 12038.5176, 0.960410833, 0.00577555131, 0.278527707, -0.00601839554, 0.99998188, 1.68218976e-05, -0.278522581, -0.00169244583, 0.960428178))
+							print("[FORCE TP] mobil tp ke cp ", i)
+						elseif i == 11 then
+							car:SetPrimaryPartCFrame(CFrame.new(-13629.6104, -19.7344017, 10660.7354, 0.954524279, 0.00575797306, -0.298077643, -0.00601825351, 0.99998188, 4.46181512e-05, 0.298072517, 0.00175131764, 0.954541624))
+							print("[FORCE TP] Mmobil tp ke cp ", i)
+						elseif i == 15 then
+							car:SetPrimaryPartCFrame(CFrame.new(-15006.1963, -19.8073997, 8341.78125, 0.903152108, 0.00544110266, 0.429286182, -0.00601091841, 0.99998194, -2.84910202e-05, -0.429278553, -0.0025546723, 0.903168499))
+							print("[FORCE TP] mobil tp ke cp ", i)
+						elseif i == 16 then
+							car:SetPrimaryPartCFrame(CFrame.new(-16704.627, -19.7335472, 7462.91162, 0.811798453, 0.00486651435, 0.583917439, -0.00597862713, 0.999982119, -2.22418457e-05, -0.583907068, -0.0034729687, 0.811813056))
+							print("[FORCE TP] mobil tp ke cp ", i)
+						end
+					end
+				else
+					warn("model cp ga ada ", i)
+					if i == 21 then
+						car:SetPrimaryPartCFrame(CFrame.new(-13737.1787, -15.9419441, 8836.73047, -0.590707541, -0.00352343125, -0.80687803, -0.00602260092, 0.99998188, 4.24210448e-05, 0.806863248, 0.00488456339, -0.590718031))
+						print("[FORCE TP] Mobil teleport ke CP", i)
+						timetrial_Start = false
+						cp_infer121023("UnHold", "CP : Selesai / Done")
+					end
+				end
+				task.wait(delayPerCP)
+			end
+		end
+		task.wait(1)
+		teleportSequence()
+	end)
+	
 	saveConfig.MouseButton1Click:Connect(function()
 		if FileNameConfig.Text == "" then
 			Notification("Err", "Gagal menghapus file, file name tidak ada.")
@@ -1184,106 +1424,16 @@ local function FBESZC_fake_script() -- Open.handler
 		end
 	end)
 end
-coroutine.wrap(FBESZC_fake_script)()
-local function FUMND_fake_script() -- usn.usner 
+coroutine.wrap(EZDCJ_fake_script)()
+local function KNCYC_fake_script() -- usn.usner 
 	local script = Instance.new('LocalScript', usn)
 
 	local label = script.Parent
 	local player = game.Players.LocalPlayer
 	label.Text = player.Name
 end
-coroutine.wrap(FUMND_fake_script)()
-local function YDHZTPK_fake_script() -- Brake.number 
-	local script = Instance.new('LocalScript', Brake)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(YDHZTPK_fake_script)()
-local function XGKYAWI_fake_script() -- HP.number 
-	local script = Instance.new('LocalScript', HP)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(XGKYAWI_fake_script)()
-local function DIVNAS_fake_script() -- SuperCharger.number 
-	local script = Instance.new('LocalScript', SuperCharger)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(DIVNAS_fake_script)()
-local function CZGBO_fake_script() -- SuperChargerBoost.number 
-	local script = Instance.new('LocalScript', SuperChargerBoost)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(CZGBO_fake_script)()
-local function TRFDJ_fake_script() -- TurboCharger.number 
-	local script = Instance.new('LocalScript', TurboCharger)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(TRFDJ_fake_script)()
-local function VNSIXM_fake_script() -- TurboChargerBoost.number 
-	local script = Instance.new('LocalScript', TurboChargerBoost)
-
-	local textbox = script.Parent
-	
-	textbox:GetPropertyChangedSignal("Text"):Connect(function()
-		local filtered = textbox.Text:gsub("%D", "")
-		if #filtered > 6 then
-			filtered = filtered:sub(1, 6)
-		end
-		textbox.Text = filtered
-	end)
-	
-end
-coroutine.wrap(VNSIXM_fake_script)()
-local function UZOP_fake_script() -- Tuning.PembatasFrame 
+coroutine.wrap(KNCYC_fake_script)()
+local function ZJWNEJF_fake_script() -- Tuning.PembatasFrame 
 	local script = Instance.new('LocalScript', Tuning)
 
 	local RunService = game:GetService("RunService")
@@ -1307,8 +1457,98 @@ local function UZOP_fake_script() -- Tuning.PembatasFrame
 	end)
 	
 end
-coroutine.wrap(UZOP_fake_script)()
-local function NWPPFXN_fake_script() -- usnBtn.usnBtnHandler 
+coroutine.wrap(ZJWNEJF_fake_script)()
+local function SIBX_fake_script() -- Brake.number 
+	local script = Instance.new('LocalScript', Brake)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(SIBX_fake_script)()
+local function UQTIWSQ_fake_script() -- HP.number 
+	local script = Instance.new('LocalScript', HP)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(UQTIWSQ_fake_script)()
+local function JDBRQYS_fake_script() -- SuperCharger.number 
+	local script = Instance.new('LocalScript', SuperCharger)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(JDBRQYS_fake_script)()
+local function MHFE_fake_script() -- SuperChargerBoost.number 
+	local script = Instance.new('LocalScript', SuperChargerBoost)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(MHFE_fake_script)()
+local function QELP_fake_script() -- TurboCharger.number 
+	local script = Instance.new('LocalScript', TurboCharger)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(QELP_fake_script)()
+local function VXZQD_fake_script() -- TurboChargerBoost.number 
+	local script = Instance.new('LocalScript', TurboChargerBoost)
+
+	local textbox = script.Parent
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local filtered = textbox.Text:gsub("%D", "")
+		if #filtered > 6 then
+			filtered = filtered:sub(1, 6)
+		end
+		textbox.Text = filtered
+	end)
+	
+end
+coroutine.wrap(VXZQD_fake_script)()
+local function LXRC_fake_script() -- usnBtn.usnBtnHandler 
 	local script = Instance.new('LocalScript', usnBtn)
 
 	local button = script.Parent
@@ -1332,8 +1572,8 @@ local function NWPPFXN_fake_script() -- usnBtn.usnBtnHandler
 		end
 	end)
 end
-coroutine.wrap(NWPPFXN_fake_script)()
-local function KCCE_fake_script() -- OpenFrame.callframe 
+coroutine.wrap(LXRC_fake_script)()
+local function PLZDKCC_fake_script() -- OpenFrame.callframe 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1347,8 +1587,8 @@ local function KCCE_fake_script() -- OpenFrame.callframe
 		end
 	end)
 end
-coroutine.wrap(KCCE_fake_script)()
-local function BCON_fake_script() -- OpenFrame.drg 
+coroutine.wrap(PLZDKCC_fake_script)()
+local function YQCDJ_fake_script() -- OpenFrame.drg 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1391,4 +1631,4 @@ local function BCON_fake_script() -- OpenFrame.drg
 	end)
 	
 end
-coroutine.wrap(BCON_fake_script)()
+coroutine.wrap(YQCDJ_fake_script)()
