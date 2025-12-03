@@ -68,8 +68,25 @@ local CurrentCP = Instance.new("TextLabel")
 local Notif_2 = Instance.new("TextLabel")
 local StartTimeTrialBtn = Instance.new("TextButton")
 local teleKeTimeTrial = Instance.new("TextButton")
+local TpToBtn = Instance.new("TextButton")
+local TeleTo = Instance.new("Frame")
+local Note = Instance.new("TextLabel")
+local Disabled = Instance.new("Folder")
+local Jakarta = Instance.new("TextButton")
+local JawaBarat = Instance.new("TextButton")
+local JawaTengah = Instance.new("TextButton")
+local JawaTimur = Instance.new("TextButton")
+local Bali = Instance.new("TextButton")
+local CLoc = Instance.new("TextLabel")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local Clone = Instance.new("TextButton")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local DragTimer = Instance.new("TextButton")
 local OpenFrame = Instance.new("ImageButton")
 local UICorner_9 = Instance.new("UICorner")
+local DragTimerFrame = Instance.new("Frame")
+local DragLabel = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
 
 --Properties:
 
@@ -303,6 +320,7 @@ ResetTune.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ResetTune.BorderSizePixel = 0
 ResetTune.Position = UDim2.new(0.37846154, 0, 0.570247948, 0)
 ResetTune.Size = UDim2.new(0, 79, 0, 32)
+ResetTune.Visible = false
 ResetTune.Font = Enum.Font.Arial
 ResetTune.Text = "Reset Tune"
 ResetTune.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -531,8 +549,8 @@ PEMBATAS_5.Parent = Pembatas
 PEMBATAS_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PEMBATAS_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PEMBATAS_5.BorderSizePixel = 0
-PEMBATAS_5.Position = UDim2.new(1.49354839, 0, -0.289645433, 0)
-PEMBATAS_5.Size = UDim2.new(0, -2, 0, 289)
+PEMBATAS_5.Position = UDim2.new(1.5, 0, -0.289645433, 0)
+PEMBATAS_5.Size = UDim2.new(0, -4, 0, 285)
 PEMBATAS_5.Font = Enum.Font.SourceSans
 PEMBATAS_5.Text = ""
 PEMBATAS_5.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -543,8 +561,8 @@ PEMBATAS_6.Parent = Pembatas
 PEMBATAS_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PEMBATAS_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PEMBATAS_6.BorderSizePixel = 0
-PEMBATAS_6.Position = UDim2.new(1.87096775, 0, 1.73934007, 0)
-PEMBATAS_6.Size = UDim2.new(0, -115, 0, 9)
+PEMBATAS_6.Position = UDim2.new(1.87096775, 0, 1.75362325, 0)
+PEMBATAS_6.Size = UDim2.new(0, -115, 0, 6)
 PEMBATAS_6.Font = Enum.Font.SourceSans
 PEMBATAS_6.Text = ""
 PEMBATAS_6.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -660,8 +678,8 @@ TimeTrialBtn.Parent = Misc
 TimeTrialBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 TimeTrialBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TimeTrialBtn.BorderSizePixel = 0
-TimeTrialBtn.Position = UDim2.new(0.188073412, 0, 0.679054081, 0)
-TimeTrialBtn.Size = UDim2.new(0, 136, 0, 34)
+TimeTrialBtn.Position = UDim2.new(0.230129495, 0, 0.695945919, 0)
+TimeTrialBtn.Size = UDim2.new(0, 114, 0, 22)
 TimeTrialBtn.Font = Enum.Font.Arial
 TimeTrialBtn.Text = "Time Trial"
 TimeTrialBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -676,6 +694,7 @@ TimeTrial.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TimeTrial.BorderSizePixel = 0
 TimeTrial.Position = UDim2.new(1.02803743, 0, 0, 0)
 TimeTrial.Size = UDim2.new(0, 174, 0, 260)
+TimeTrial.Visible = false
 
 TimeSetting.Name = "TimeSetting"
 TimeSetting.Parent = TimeTrial
@@ -750,6 +769,176 @@ teleKeTimeTrial.TextScaled = true
 teleKeTimeTrial.TextSize = 17.000
 teleKeTimeTrial.TextWrapped = true
 
+TpToBtn.Name = "TpToBtn"
+TpToBtn.Parent = Misc
+TpToBtn.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+TpToBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpToBtn.BorderSizePixel = 0
+TpToBtn.Position = UDim2.new(0.230129495, 0, 0.466216177, 0)
+TpToBtn.Size = UDim2.new(0, 114, 0, 20)
+TpToBtn.Font = Enum.Font.Arial
+TpToBtn.Text = "Teleport"
+TpToBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpToBtn.TextScaled = true
+TpToBtn.TextSize = 17.000
+TpToBtn.TextWrapped = true
+
+TeleTo.Name = "TeleTo"
+TeleTo.Parent = Misc
+TeleTo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleTo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TeleTo.BorderSizePixel = 0
+TeleTo.Position = UDim2.new(1.02803743, 0, 0, 0)
+TeleTo.Size = UDim2.new(0, 210, 0, 260)
+TeleTo.Visible = false
+
+Note.Name = "Note"
+Note.Parent = TeleTo
+Note.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Note.BackgroundTransparency = 1.000
+Note.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Note.BorderSizePixel = 0
+Note.Position = UDim2.new(0.170279071, 0, 0, 0)
+Note.Size = UDim2.new(0, 128, 0, 50)
+Note.Font = Enum.Font.Arial
+Note.Text = "Untuk teleport, jangan di atas mobil / di dalam mobil"
+Note.TextColor3 = Color3.fromRGB(255, 255, 255)
+Note.TextScaled = true
+Note.TextSize = 17.000
+Note.TextWrapped = true
+
+Disabled.Name = "Disabled"
+Disabled.Parent = TeleTo
+
+Jakarta.Name = "Jakarta"
+Jakarta.Parent = Disabled
+Jakarta.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Jakarta.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Jakarta.BorderSizePixel = 0
+Jakarta.Position = UDim2.new(0.0340500623, 0, 0.254417837, 0)
+Jakarta.Size = UDim2.new(0, 90, 0, 18)
+Jakarta.Visible = false
+Jakarta.Font = Enum.Font.Arial
+Jakarta.Text = "Jakarta"
+Jakarta.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jakarta.TextScaled = true
+Jakarta.TextSize = 17.000
+Jakarta.TextWrapped = true
+
+JawaBarat.Name = "Jawa Barat"
+JawaBarat.Parent = Disabled
+JawaBarat.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+JawaBarat.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JawaBarat.BorderSizePixel = 0
+JawaBarat.Position = UDim2.new(0.534050047, 0, 0.254417837, 0)
+JawaBarat.Size = UDim2.new(0, 90, 0, 18)
+JawaBarat.Visible = false
+JawaBarat.Font = Enum.Font.Arial
+JawaBarat.Text = "Jawa Barat"
+JawaBarat.TextColor3 = Color3.fromRGB(255, 255, 255)
+JawaBarat.TextScaled = true
+JawaBarat.TextSize = 17.000
+JawaBarat.TextWrapped = true
+
+JawaTengah.Name = "Jawa Tengah"
+JawaTengah.Parent = Disabled
+JawaTengah.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+JawaTengah.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JawaTengah.BorderSizePixel = 0
+JawaTengah.Position = UDim2.new(0.0340500623, 0, 0.462110132, 0)
+JawaTengah.Size = UDim2.new(0, 90, 0, 18)
+JawaTengah.Visible = false
+JawaTengah.Font = Enum.Font.Arial
+JawaTengah.Text = "Jawa Tengah"
+JawaTengah.TextColor3 = Color3.fromRGB(255, 255, 255)
+JawaTengah.TextScaled = true
+JawaTengah.TextSize = 17.000
+JawaTengah.TextWrapped = true
+
+JawaTimur.Name = "Jawa Timur"
+JawaTimur.Parent = Disabled
+JawaTimur.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+JawaTimur.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JawaTimur.BorderSizePixel = 0
+JawaTimur.Position = UDim2.new(0.534050047, 0, 0.358263969, 0)
+JawaTimur.Size = UDim2.new(0, 90, 0, 18)
+JawaTimur.Visible = false
+JawaTimur.Font = Enum.Font.Arial
+JawaTimur.Text = "Jawa Timur"
+JawaTimur.TextColor3 = Color3.fromRGB(255, 255, 255)
+JawaTimur.TextScaled = true
+JawaTimur.TextSize = 17.000
+JawaTimur.TextWrapped = true
+
+Bali.Name = "Bali"
+Bali.Parent = Disabled
+Bali.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Bali.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bali.BorderSizePixel = 0
+Bali.Position = UDim2.new(0.0340500623, 0, 0.358263969, 0)
+Bali.Size = UDim2.new(0, 90, 0, 18)
+Bali.Visible = false
+Bali.Font = Enum.Font.Arial
+Bali.Text = "Bali"
+Bali.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bali.TextScaled = true
+Bali.TextSize = 17.000
+Bali.TextWrapped = true
+
+CLoc.Name = "CLoc"
+CLoc.Parent = TeleTo
+CLoc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLoc.BackgroundTransparency = 1.000
+CLoc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CLoc.BorderSizePixel = 0
+CLoc.Position = UDim2.new(0.251231462, 0, 0.230769232, 0)
+CLoc.Size = UDim2.new(0, 94, 0, 28)
+CLoc.Font = Enum.Font.Arial
+CLoc.Text = ""
+CLoc.TextColor3 = Color3.fromRGB(255, 255, 255)
+CLoc.TextScaled = true
+CLoc.TextSize = 17.000
+CLoc.TextWrapped = true
+
+ScrollingFrame_2.Parent = TeleTo
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0, 0, 0.36153847, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 209, 0, 166)
+
+Clone.Name = "Clone"
+Clone.Parent = ScrollingFrame_2
+Clone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clone.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clone.BorderSizePixel = 0
+Clone.Size = UDim2.new(0, 209, 0, 34)
+Clone.Visible = false
+Clone.Font = Enum.Font.Arial
+Clone.Text = ""
+Clone.TextColor3 = Color3.fromRGB(0, 0, 0)
+Clone.TextScaled = true
+Clone.TextSize = 17.000
+Clone.TextWrapped = true
+
+UIListLayout_3.Parent = ScrollingFrame_2
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+
+DragTimer.Name = "DragTimer"
+DragTimer.Parent = Misc
+DragTimer.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+DragTimer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DragTimer.BorderSizePixel = 0
+DragTimer.Position = UDim2.new(0.230129495, 0, 0.587837815, 0)
+DragTimer.Size = UDim2.new(0, 114, 0, 20)
+DragTimer.Font = Enum.Font.Arial
+DragTimer.Text = "Drag Timer"
+DragTimer.TextColor3 = Color3.fromRGB(255, 255, 255)
+DragTimer.TextScaled = true
+DragTimer.TextSize = 17.000
+DragTimer.TextWrapped = true
+
 OpenFrame.Name = "OpenFrame"
 OpenFrame.Parent = cedit
 OpenFrame.BackgroundColor3 = Color3.fromRGB(102, 110, 117)
@@ -762,9 +951,35 @@ OpenFrame.Image = "rbxassetid://111851901427385"
 UICorner_9.CornerRadius = UDim.new(2, 0)
 UICorner_9.Parent = OpenFrame
 
+DragTimerFrame.Name = "DragTimerFrame"
+DragTimerFrame.Parent = cedit
+DragTimerFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DragTimerFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DragTimerFrame.BorderSizePixel = 0
+DragTimerFrame.Position = UDim2.new(0.754528999, 0, 0.130044848, 0)
+DragTimerFrame.Size = UDim2.new(0, 186, 0, 57)
+DragTimerFrame.Visible = false
+
+DragLabel.Name = "DragLabel"
+DragLabel.Parent = DragTimerFrame
+DragLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DragLabel.BackgroundTransparency = 1.000
+DragLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DragLabel.BorderSizePixel = 0
+DragLabel.Position = UDim2.new(-0.00564706465, 0, 0, 0)
+DragLabel.Size = UDim2.new(0, 187, 0, 58)
+DragLabel.Font = Enum.Font.Bangers
+DragLabel.Text = ""
+DragLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+DragLabel.TextScaled = true
+DragLabel.TextSize = 14.000
+DragLabel.TextWrapped = true
+
+UICorner_10.Parent = DragTimerFrame
+
 -- Scripts:
 
-local function JDEDNWI_fake_script() -- Open.handler 
+local function LRDKUU_fake_script() -- Open.handler 
 	local script = Instance.new('LocalScript', Open)
 
 	local Username_TBName1 = ""
@@ -826,8 +1041,13 @@ local function JDEDNWI_fake_script() -- Open.handler
 	local RejoinBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("Rejoin")
 	local MainFrameBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("MainFrameBtn")
 	local TimeTrialBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrialBtn")
+	local TpToBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TpToBtn")
+	local TpToFrame = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TeleTo")
 	local StartTimeTrialBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial"):WaitForChild("StartTimeTrialBtn")
 	local TeleTimeTrialBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial"):WaitForChild("teleKeTimeTrial")
+	local DragTimerFrame = script.Parent.Parent:WaitForChild("DragTimerFrame")
+	local DragTimerLabel = DragTimerFrame:WaitForChild("DragLabel")
+	local DragTimerBtn = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("DragTimer")
 	
 	local username_s1 = ""
 	local brake_s1 = 0
@@ -886,7 +1106,7 @@ local function JDEDNWI_fake_script() -- Open.handler
 	
 	local function ButtonHandler (bool)
 		SetTuner.Visible = bool
-		ResetTune.Visible = bool
+		-- ResetTune.Visible = bool
 	end
 	
 	local function Tunererr (username_s2, hp_s2, sc_s2, scAmount_s2, tc_s2, tcAmount_s2, tunertype)
@@ -1223,10 +1443,34 @@ local function JDEDNWI_fake_script() -- Open.handler
 	
 	TimeTrialBtn.MouseButton1Click:Connect(function()
 		local TimeTrialFrame = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial")
+		if TpToFrame.Visible == true then
+			TpToFrame.Visible = false
+		end
 		if TimeTrialFrame.Visible == true then
 			TimeTrialFrame.Visible = false
 		else
 			TimeTrialFrame.Visible = true
+		end
+	end)
+	
+	TpToBtn.MouseButton1Click:Connect(function()
+		local TimeTrialFrame = script.Parent.Parent:WaitForChild("Misc"):WaitForChild("TimeTrial")
+		if TimeTrialFrame.Visible == true then
+			TimeTrialFrame.Visible = false
+		end
+		
+		if TpToFrame.Visible == true then
+			TpToFrame.Visible = false
+		else
+			TpToFrame.Visible = true
+		end
+	end)
+	
+	DragTimerBtn.MouseButton1Click:Connect(function()
+		if DragTimerFrame.Visible == true then
+			DragTimerFrame.Visible = false
+		else
+			DragTimerFrame.Visible = true
 		end
 	end)
 	
@@ -1379,8 +1623,8 @@ local function JDEDNWI_fake_script() -- Open.handler
 		end
 	end)
 end
-coroutine.wrap(JDEDNWI_fake_script)()
-local function MIQIV_fake_script() -- Open.drg 
+coroutine.wrap(LRDKUU_fake_script)()
+local function FMYQVX_fake_script() -- Open.drg 
 	local script = Instance.new('LocalScript', Open)
 
 	local mainFrame = script.Parent
@@ -1424,16 +1668,16 @@ local function MIQIV_fake_script() -- Open.drg
 	end
 	enableDrag(mainFrame)
 end
-coroutine.wrap(MIQIV_fake_script)()
-local function BMYPYVR_fake_script() -- usn.usner 
+coroutine.wrap(FMYQVX_fake_script)()
+local function OFQENLQ_fake_script() -- usn.usner 
 	local script = Instance.new('LocalScript', usn)
 
 	local label = script.Parent
 	local player = game.Players.LocalPlayer
 	label.Text = player.Name
 end
-coroutine.wrap(BMYPYVR_fake_script)()
-local function NUZXGPI_fake_script() -- Tuning.PembatasFrame 
+coroutine.wrap(OFQENLQ_fake_script)()
+local function ITJTXGS_fake_script() -- Tuning.PembatasFrame 
 	local script = Instance.new('LocalScript', Tuning)
 
 	local RunService = game:GetService("RunService")
@@ -1457,8 +1701,8 @@ local function NUZXGPI_fake_script() -- Tuning.PembatasFrame
 	end)
 	
 end
-coroutine.wrap(NUZXGPI_fake_script)()
-local function CBSOQO_fake_script() -- Brake.number 
+coroutine.wrap(ITJTXGS_fake_script)()
+local function SCPXNJU_fake_script() -- Brake.number 
 	local script = Instance.new('LocalScript', Brake)
 
 	local textbox = script.Parent
@@ -1472,8 +1716,8 @@ local function CBSOQO_fake_script() -- Brake.number
 	end)
 	
 end
-coroutine.wrap(CBSOQO_fake_script)()
-local function UFSZCCW_fake_script() -- HP.number 
+coroutine.wrap(SCPXNJU_fake_script)()
+local function UDKIAKU_fake_script() -- HP.number 
 	local script = Instance.new('LocalScript', HP)
 
 	local textbox = script.Parent
@@ -1487,8 +1731,8 @@ local function UFSZCCW_fake_script() -- HP.number
 	end)
 	
 end
-coroutine.wrap(UFSZCCW_fake_script)()
-local function VKYHKBT_fake_script() -- SuperCharger.number 
+coroutine.wrap(UDKIAKU_fake_script)()
+local function DPWC_fake_script() -- SuperCharger.number 
 	local script = Instance.new('LocalScript', SuperCharger)
 
 	local textbox = script.Parent
@@ -1502,8 +1746,8 @@ local function VKYHKBT_fake_script() -- SuperCharger.number
 	end)
 	
 end
-coroutine.wrap(VKYHKBT_fake_script)()
-local function ZNIBREN_fake_script() -- SuperChargerBoost.number 
+coroutine.wrap(DPWC_fake_script)()
+local function VEWXM_fake_script() -- SuperChargerBoost.number 
 	local script = Instance.new('LocalScript', SuperChargerBoost)
 
 	local textbox = script.Parent
@@ -1517,8 +1761,8 @@ local function ZNIBREN_fake_script() -- SuperChargerBoost.number
 	end)
 	
 end
-coroutine.wrap(ZNIBREN_fake_script)()
-local function CPVEPKB_fake_script() -- TurboCharger.number 
+coroutine.wrap(VEWXM_fake_script)()
+local function MESK_fake_script() -- TurboCharger.number 
 	local script = Instance.new('LocalScript', TurboCharger)
 
 	local textbox = script.Parent
@@ -1532,8 +1776,8 @@ local function CPVEPKB_fake_script() -- TurboCharger.number
 	end)
 	
 end
-coroutine.wrap(CPVEPKB_fake_script)()
-local function ORCMS_fake_script() -- TurboChargerBoost.number 
+coroutine.wrap(MESK_fake_script)()
+local function VDPNFSA_fake_script() -- TurboChargerBoost.number 
 	local script = Instance.new('LocalScript', TurboChargerBoost)
 
 	local textbox = script.Parent
@@ -1547,8 +1791,8 @@ local function ORCMS_fake_script() -- TurboChargerBoost.number
 	end)
 	
 end
-coroutine.wrap(ORCMS_fake_script)()
-local function VIYYEL_fake_script() -- usnBtn.usnBtnHandler 
+coroutine.wrap(VDPNFSA_fake_script)()
+local function JWPJEPF_fake_script() -- usnBtn.usnBtnHandler 
 	local script = Instance.new('LocalScript', usnBtn)
 
 	local button = script.Parent
@@ -1572,8 +1816,138 @@ local function VIYYEL_fake_script() -- usnBtn.usnBtnHandler
 		end
 	end)
 end
-coroutine.wrap(VIYYEL_fake_script)()
-local function MPUPCQ_fake_script() -- Misc.drg 
+coroutine.wrap(JWPJEPF_fake_script)()
+local function CRGL_fake_script() -- TeleTo.Teleport Handler 
+	local script = Instance.new('LocalScript', TeleTo)
+
+	--[[
+	local Jakarta = script.Parent:WaitForChild("Jakarta")
+	local JawaBarat = script.Parent:WaitForChild("Jawa Barat")
+	local JawaTimur = script.Parent:WaitForChild("Jawa Timur")
+	local JawaTengah = script.Parent:WaitForChild("Jawa Tengah")
+	local Bali = script.Parent:WaitForChild("Bali")
+	
+	local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+	
+	Jakarta.MouseButton1Click:Connect(function()
+		local target = "Jakarta"
+		local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+		if placeName == target then
+			--print(`bukan jabar, target {target} marked ${placeName}`)
+			return
+		end
+	end)
+	
+	JawaBarat.MouseButton1Click:Connect(function()
+		local target = "Jawa Barat"
+		local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+		if placeName == target then
+			--print(`bukan jabar, target {target} marked ${placeName}`)
+			return
+		end
+	end)
+	JawaTimur.MouseButton1Click:Connect(function()
+		local target = "Jawa Timur"
+		local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+		if placeName == target then
+			--print(`bukan jabar, target {target} marked ${placeName}`)
+			return
+		end
+	end)
+	JawaTengah.MouseButton1Click:Connect(function()
+		local target = "Jawa Tengah"
+		local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+		if placeName == target then
+			--print(`bukan jabar, target {target} marked ${placeName}`)
+			return
+		end
+	end)
+	Bali.MouseButton1Click:Connect(function()
+		local target = "Bali"
+		local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+		if placeName == target then
+			--print(`bukan jabar, target {target} marked ${placeName}`)
+			return
+		end
+	end)
+	]]
+	
+	local tptolokasi = {
+		["Jawa Barat"] = {
+			{ name = "Travel", location = "-2377.27515, 8.52105522, -1936.82019, -0.0525176525, 0, 0.998619974, 0, 1, 0, -0.998619974, 0, -0.0525176525" },
+			{ name = "Dealer Premium", location = "357.884064, 9.8106432, -257.179718, 0.981621504, 0, 0.190838262, 0, 1, 0, -0.190838262, 0, 0.981621504" },
+			{ name = "Dealer Bekas", location = "2827.70117, 28.0402527, 18604.1387, 0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, 0.707134247"},
+			{ name = "Drag Bekasi", location = "3681.13647, 28.4743805, 15963.2363, -1, 0, 0, 0, 1, 0, 0, 0, -1"},
+			{ name = "Modif Sentul", location = "-12129.0449, -27.8468094, 9349.79199, 0.707002163, 0, -0.707211435, 0, 1, 0, 0.707211435, 0, 0.707002163"},
+			{ name = "Dealer Otnas", location = "-25949.7227, 187.516541, 21104, -0.965907454, 0, -0.25888893, 0, 1, 0, 0.25888893, 0, -0.965907454" },
+			{ name = "Dealer Retro", location = "-23637.0156, 187.388916, 18908.6484, 0.245138705, 0, -0.969488204, 0, 1, 0, 0.969488204, 0, 0.245138705" },
+			{ name = "Pom Bensin", location = "1824.18616, 6.43839216, -370.43689, 0.115254402, 0, 0.993336022, 0, 1, 0, -0.993336022, 0, 0.115254402" },
+			{ name = "Cuci Mobil", location = "3602.67554, 1.81764889, 1180.48792, -0.184023023, 0, -0.982921898, 0, 1, 0, 0.982921898, 0, -0.184023023" },
+		},
+	
+		["Jakarta"] = {
+		},
+	
+		["Jawa Timur"] = {
+		},
+	
+		["Jawa Tengah"] = {
+		},
+	
+		["Bali"] = {
+		},
+	}
+	
+	local CLocLabel = script.Parent:WaitForChild("CLoc")
+	--local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+	local placeName = "Jawa Barat"
+	CLocLabel.Visible = true
+	CLocLabel.Text = placeName
+	
+	local scroll = script.Parent:WaitForChild("ScrollingFrame")
+	local layout = scroll:FindFirstChildOfClass("UIListLayout")
+	
+	if layout then
+		layout.Padding = UDim.new(0, 3)
+	end
+	local template = scroll:WaitForChild("Clone")
+	
+	for _, data in ipairs(tptolokasi[placeName]) do
+		local btn = template:Clone()
+		btn.Visible = true
+		btn.Parent = scroll
+		btn.Text = data.name
+		btn.Name = "Button_"..data.name
+		btn.MouseButton1Click:Connect(function()
+			local rootPart = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	
+			-- Ambil angka dari string (12 angka untuk full CFrame)
+			local numbers = {}
+			for num in string.gmatch(data.location, "[-%d%.]+") do
+				table.insert(numbers, tonumber(num))
+			end
+	
+			if #numbers == 12 then
+				-- Buat CFrame dari 12 angka
+				local cf = CFrame.new(
+					numbers[1], numbers[2], numbers[3],
+					numbers[4], numbers[5], numbers[6],
+					numbers[7], numbers[8], numbers[9],
+					numbers[10], numbers[11], numbers[12]
+				)
+	
+				-- Tambah offset 5 stud ke atas
+				cf = cf + Vector3.new(0, 5, 0)
+	
+				rootPart.CFrame = cf
+			else
+				warn("Lokasi tidak valid:", data.location)
+			end
+		end)
+	end
+end
+coroutine.wrap(CRGL_fake_script)()
+local function YWMWU_fake_script() -- Misc.drg 
 	local script = Instance.new('LocalScript', Misc)
 
 	local mainFrame = script.Parent
@@ -1617,8 +1991,8 @@ local function MPUPCQ_fake_script() -- Misc.drg
 	end
 	enableDrag(mainFrame)
 end
-coroutine.wrap(MPUPCQ_fake_script)()
-local function GONSP_fake_script() -- OpenFrame.callframe 
+coroutine.wrap(YWMWU_fake_script)()
+local function AWRCSZO_fake_script() -- OpenFrame.callframe 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1636,8 +2010,8 @@ local function GONSP_fake_script() -- OpenFrame.callframe
 		end
 	end)
 end
-coroutine.wrap(GONSP_fake_script)()
-local function MXMB_fake_script() -- OpenFrame.drg 
+coroutine.wrap(AWRCSZO_fake_script)()
+local function VDBG_fake_script() -- OpenFrame.drg 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local button = script.Parent
@@ -1680,4 +2054,73 @@ local function MXMB_fake_script() -- OpenFrame.drg
 	end)
 	
 end
-coroutine.wrap(MXMB_fake_script)()
+coroutine.wrap(VDBG_fake_script)()
+local function MGIE_fake_script() -- DragLabel.DragTimer 
+	local script = Instance.new('LocalScript', DragLabel)
+
+	local Lighting = game:GetService("Lighting")
+	local RunService = game:GetService("RunService")
+	
+	local label = script.Parent
+	
+	local function formatTime(clockTime)
+		local totalSeconds = clockTime * 3600
+		local hours = math.floor(totalSeconds / 3600)
+		local minutes = math.floor((totalSeconds % 3600) / 60)
+		local seconds = math.floor(totalSeconds % 60)
+		local milliseconds = math.floor((totalSeconds * 1000) % 1000)
+		return string.format("%02d:%02d:%02d:%03d", hours, minutes, seconds, milliseconds)
+	end
+	
+	RunService.RenderStepped:Connect(function()
+		local time = Lighting.ClockTime
+		label.Text = formatTime(time)
+	end)
+	
+end
+coroutine.wrap(MGIE_fake_script)()
+local function PDOEVQ_fake_script() -- DragTimerFrame.drg 
+	local script = Instance.new('LocalScript', DragTimerFrame)
+
+	local mainFrame = script.Parent
+	local UserInputService = game:GetService("UserInputService")
+	local dragging = false
+	local dragStart
+	local startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		mainFrame.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	local function enableDrag(guiObject)
+		guiObject.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				dragging = true
+				dragStart = input.Position
+				startPos = mainFrame.Position
+	
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		guiObject.InputChanged:Connect(function(input)
+			if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+				update(input)
+			end
+		end)
+	end
+	for _, obj in ipairs(mainFrame:GetDescendants()) do
+		if obj:IsA("GuiObject") then
+			enableDrag(obj)
+		end
+	end
+	enableDrag(mainFrame)
+end
+coroutine.wrap(PDOEVQ_fake_script)()
